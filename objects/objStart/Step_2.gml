@@ -1,0 +1,1 @@
+room_goto(global.continue_room);

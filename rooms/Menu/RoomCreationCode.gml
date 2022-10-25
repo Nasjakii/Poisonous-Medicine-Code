@@ -1,0 +1,1 @@
+global.game_room = false;

@@ -1,0 +1,11 @@
+
+
+scr_get_inventory - 
+scr_load_inventory - 
+scr_safe_inventory -
+
+scr_add_item - 
+scr_delete_item - 
+scr_get_item_index -
+scr_item_interact - 
+scr_item_reset - 

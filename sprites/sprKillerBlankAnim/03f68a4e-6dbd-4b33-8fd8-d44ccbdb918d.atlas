@@ -1,0 +1,67 @@
+skeleton.png
+size:225,46
+filter:Linear,Linear
+pma:true
+Arm Lower Left
+bounds:128,2,16,18
+offsets:84,154,140,221
+rotate:90
+Arm Lower Right
+bounds:148,3,15,17
+offsets:32,153,140,221
+rotate:90
+Arm Upper Left
+bounds:167,2,20,19
+offsets:71,165,140,221
+Arm Upper Right
+bounds:189,2,19,20
+offsets:40,164,140,221
+rotate:90
+Foot Left
+bounds:211,3,18,9
+offsets:68,90,140,221
+rotate:90
+Hand Left
+bounds:107,2,15,19
+offsets:93,142,140,221
+rotate:90
+Hand Right
+bounds:90,2,15,14
+offsets:24,143,140,221
+Head
+bounds:73,18,20,26
+offsets:54,191,140,221
+Jacket1
+bounds:2,2,27,42
+offsets:52,147,140,221
+Jacket1 Arm Upper Left
+bounds:167,23,21,21
+offsets:71,164,140,221
+Jacket1 Arm Upper Right
+bounds:190,23,21,20
+offsets:38,165,140,221
+rotate:90
+Jacket2
+bounds:31,2,27,42
+offsets:52,147,140,221
+Leg Lower Left
+bounds:95,19,8,25
+offsets:68,97,140,221
+Leg Lower Right
+bounds:105,19,8,25
+offsets:55,97,140,221
+Leg Upper Left
+bounds:60,16,11,28
+offsets:65,115,140,221
+Leg Upper Right
+bounds:60,3,11,28
+offsets:55,115,140,221
+rotate:90
+Neck
+bounds:212,31,13,11
+offsets:59,184,140,221
+rotate:90
+Torso
+bounds:115,20,24,50
+offsets:53,138,140,221
+rotate:90

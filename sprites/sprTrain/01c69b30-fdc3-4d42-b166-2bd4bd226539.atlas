@@ -1,0 +1,35 @@
+skeleton.png
+size:746,237
+filter:Linear,Linear
+pma:true
+Stängli
+bounds:682,71,67,28
+offsets:364,66,600,300
+rotate:90
+Stängli 2
+bounds:682,140,95,31
+offsets:333,83,600,300
+rotate:90
+Stängli 3
+bounds:715,182,53,29
+offsets:414,61,600,300
+rotate:90
+Train
+bounds:2,2,580,233
+offsets:11,46,600,300
+Wheel 1
+bounds:682,16,53,53
+offsets:468,41,600,300
+Wheel 2
+bounds:605,163,75,72
+offsets:344,43,600,300
+Wheel 3
+bounds:605,89,75,72
+offsets:253,42,600,300
+Wheel 4
+bounds:605,15,75,72
+offsets:162,42,600,300
+Ächsli unten
+bounds:584,38,197,19
+offsets:188,82,600,300
+rotate:90

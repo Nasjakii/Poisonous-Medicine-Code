@@ -1,0 +1,15 @@
+skeleton.png
+size:392,164
+filter:Linear,Linear
+pma:true
+7a571090-3c23-4e03-8ed0-dc0ee6d08554
+bounds:2,2,160,196
+rotate:90
+Watch_leave
+bounds:200,58,104,96
+offsets:0,1,104,104
+rotate:90
+Wheel_big
+bounds:298,70,92,92
+wheel_small
+bounds:298,18,50,50

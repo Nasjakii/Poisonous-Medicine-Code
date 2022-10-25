@@ -1,0 +1,50 @@
+Jacob Layers.png
+size:210,62
+filter:Linear,Linear
+pma:true
+Arm Links
+bounds:141,4,6,18
+Arm Lower Links
+bounds:186,8,6,14
+Arm Lower Rechts
+bounds:105,2,8,18
+Arm Rechts
+bounds:15,3,9,12
+offsets:3,2,12,14
+Case
+bounds:149,5,17,17
+Foot Right
+bounds:178,7,15,6
+rotate:90
+Foot left
+bounds:194,9,14,6
+rotate:90
+Hand Left
+bounds:168,6,8,16
+Hand Right
+bounds:2,2,13,11
+rotate:90
+Head
+bounds:115,3,19,24
+rotate:90
+Left Leg
+bounds:70,6,9,33
+rotate:90
+Left Lower Leg
+bounds:200,26,8,34
+Mantel Hinten
+bounds:106,24,36,82
+rotate:90
+Mantel Vorne
+bounds:2,17,43,82
+offsets:9,33,80,150
+rotate:90
+Neck
+bounds:26,4,8,11
+Right Leg
+bounds:36,5,10,32
+rotate:90
+Right Lower Leg
+bounds:190,25,8,35
+Upper Body
+bounds:86,22,18,38

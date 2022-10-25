@@ -1,0 +1,5 @@
+
+
+	if !variable_instance_exists(id, "var_name") {
+		var_name = 0;
+	}
