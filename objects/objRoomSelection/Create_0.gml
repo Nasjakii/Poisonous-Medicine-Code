@@ -1,5 +1,5 @@
 
-//Todo Delete
+//Todo Delete//
 window_set_size(display_get_width() / 3 * 2, display_get_height() / 3 * 2);
 
 
