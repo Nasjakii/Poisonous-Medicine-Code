@@ -1,15 +1,17 @@
 
 function scr_draw_dialog(dialog_index){
 	
+	//look which interact is best
+	text = text_arr[dialog_index]
+	debug text_arr));
+	
 	if special_interact {
 		
 		//special camera
 		scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
 
-		scr_quest_create("Paperboy quest");
-		
-		debug special_arr[0,0]));
-		
+		//scr_quest_create("Paperboy quest");
+
 		
 		
 	} else {
@@ -35,7 +37,7 @@ function scr_draw_dialog(dialog_index){
 			//Setup
 			talking = true;
 			var sprite = profile;
-			text = text_arr[dialog_index]
+			
 		
 	
 		#endregion

@@ -9,9 +9,12 @@ function scr_create_subject(objName, profile_sprite = sprNothing){
 	//Array of Facial expressions
 	profile = profile_sprite;
 	text_arr = scr_get_dialog(name);
+	
+	//empty elements are important bc of the dialog index
 	special_arr = scr_get_dialog(name, "F");
 	
-	debug special_arr));
+	
+
 	
 	//safe
 	dialog_index = 0;

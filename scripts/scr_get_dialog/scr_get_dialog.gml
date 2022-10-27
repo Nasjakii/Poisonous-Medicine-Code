@@ -7,26 +7,26 @@ function scr_get_dialog(object_name, kind = ""){
 		scr_error("No Dialog found for", object_name);
 		return false;
 	}
-
-	var d_array = [];
-	d_array[0,0] = 0;
-
-	for(var i = 0; i < ds_map_size(c_map);i++) {							
-					//key	special key						
-		var key = string(i) + kind;
-		var d_list = ds_map_find_value(c_map, key); //giving the dialog lists
+	
+	
+	var re_array;
+	for(var i = 0; i < ds_map_size(c_map); i++) {
 		
-		if d_list != undefined {
-
-			for(var i2 = 0; i2 < ds_list_size(d_list); i2++) {
-				d_array[i,i2] = ds_list_find_value(d_list, i2); //giving the list elements
+		var key = string(i) + kind;
+		if ds_map_find_value(c_map, key) != undefined {
+			var list = ds_map_find_value(c_map, key);
+						
+			
+			for(var i2 = 0; i2 < ds_list_size(list); i2++) {
+				re_array[i,i2] = ds_list_find_value(list, i2);
 			}
 		}
-	
+		
+
 	}
 	
-	return d_array;
+	return re_array;
 	
-	ds_list_destroy(d_list);
+	
 
 }
