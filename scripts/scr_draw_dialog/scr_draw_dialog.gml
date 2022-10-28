@@ -1,48 +1,35 @@
 
 function scr_draw_dialog(dialog_index){
 	
-	//look which interact is best
-	text = text_arr[dialog_index]
-	debug text_arr));
+	#region Variablen Instanziieren
 	
-	if special_interact {
-		
-		//special camera
-		scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
-
-		//scr_quest_create("Paperboy quest");
-
-		
-		
-	} else {
-	
-	
-		//Exit if the person is not able to talk
-		if can_talk == false {
-			return false;
+		if !variable_instance_exists(id, "pretty_str_index") {
+			pretty_str_index = 0;
+		} else {
+			pretty_str_index++;
+		}
+		if !variable_instance_exists(id, "text_page") {
+			text_page = 0;
 		} 
-		objKiller.dialog = true;
-	
-		#region Variablen Instanziieren
-	
-			if !variable_instance_exists(id, "pretty_str_index") {
-				pretty_str_index = 0;
-			} else {
-				pretty_str_index++;
-			}
-			if !variable_instance_exists(id, "text_page") {
-				text_page = 0;
-			} 
-		
-			//Setup
-			talking = true;
-			var sprite = profile;
-			
-		
-	
-		#endregion
+	#endregion
 	
 	
+	#region special interact
+		if special_interact_index <= global.event_index {
+			text = special_arr[special_interact_index];
+			//special camera
+			scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
+		} else {
+			text = text_arr[dialog_index];
+		}
+	#endregion
+	
+	//Setup
+	talking = true;
+	var sprite = profile;
+	objKiller.dialog = true;
+
+	#region Text positions and font
 		var xpos = (gui_width - sprite_get_width(sprDialogWindow)) / 2;
 		var ypos = gui_height - sprite_get_height(sprDialogWindow);
 
@@ -54,38 +41,38 @@ function scr_draw_dialog(dialog_index){
 		scr_set_text(c_black,fa_left,fa_top, foCustom);
 		draw_text_ext(xpos + 60, ypos + 60, pretty_str, string_height(pretty_str),sprite_get_width(sprDialogWindow)-120);
 		scr_reset_text();
+	#endregion
 	
 	
-	
-		//Quick draw text
-		if keyboard_check_direct(vk_space) {
-			//double speed
-			pretty_str_index++;
-		}
-	
-		//Next page
-		if keyboard_check_released(vk_space) && pretty_str_index >= string_length(text[text_page]){
-			//reset the string "animation"
-			pretty_str_index = 0;
-
-			//go to next page if its not the last
-			if text_page < array_length(text) - 1 {
-				text_page++;
-			} else {		
-				//End Dialog
-				interact = false;
-				talking = false;
-			
-				//if was interacted with an item
-				item_interacted_with = -1;
-
-				//Reset to page 0
-				text_page = 0;
-				objKiller.dialog = false;
-
-			}
-		}
-	
+	//Quick draw text
+	if keyboard_check_direct(vk_space) {
+		//double speed
+		pretty_str_index++;
 	}
+	
+	//Next page
+	if keyboard_check_released(vk_space) && pretty_str_index >= string_length(text[text_page]){
+		//reset the string "animation"
+		pretty_str_index = 0;
+
+		//go to next page if its not the last
+		if text_page < array_length(text) - 1 {
+			text_page++;
+		} else {		
+			//End Dialog
+			interact = false;
+			talking = false;
+		
+			//if was interacted with an item
+			item_interacted_with = -1;
+
+			//Reset to page 0
+			text_page = 0;
+			objKiller.dialog = false;
+
+		}
+	}
+	
+	
 	
 }

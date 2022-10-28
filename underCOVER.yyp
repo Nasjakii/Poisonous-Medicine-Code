@@ -236,6 +236,7 @@
     {"id":{"name":"sprLedder2","path":"sprites/sprLedder2/sprLedder2.yy",},"order":9,},
     {"id":{"name":"sprGroundWater1","path":"sprites/sprGroundWater1/sprGroundWater1.yy",},"order":4,},
     {"id":{"name":"foDefault","path":"fonts/foDefault/foDefault.yy",},"order":0,},
+    {"id":{"name":"scr_dialog_get_next_sequence","path":"scripts/scr_dialog_get_next_sequence/scr_dialog_get_next_sequence.yy",},"order":5,},
     {"id":{"name":"sprSyringe","path":"sprites/sprSyringe/sprSyringe.yy",},"order":6,},
     {"id":{"name":"scr_get_item_holding","path":"scripts/scr_get_item_holding/scr_get_item_holding.yy",},"order":3,},
     {"id":{"name":"sprPotion9","path":"sprites/sprPotion9/sprPotion9.yy",},"order":8,},

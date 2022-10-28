@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_debug_info",
+  "name": "scr_dialog_get_next_sequence",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Tools",
-    "path": "folders/Scripts/Tools.yy",
+    "name": "Dialog",
+    "path": "folders/Scripts/Short/Dialog.yy",
   },
 }

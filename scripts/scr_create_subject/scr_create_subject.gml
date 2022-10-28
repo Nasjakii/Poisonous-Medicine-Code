@@ -13,13 +13,15 @@ function scr_create_subject(objName, profile_sprite = sprNothing){
 	//empty elements are important bc of the dialog index
 	special_arr = scr_get_dialog(name, "F");
 	
+	special_interact_index = scr_dialog_get_next_sequence(0, special_arr);
+
 	
 
 	
 	//safe
 	dialog_index = 0;
 	
-	special_interact = true;
+	
 	
 	
 	//Todo shouldnt be needed later

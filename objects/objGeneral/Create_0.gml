@@ -69,6 +69,9 @@ global.day_time = 0;
 
 	event_map = ds_map_create();
 
+	global.event_index = 2;
+	
+	
 #endregion
 
 

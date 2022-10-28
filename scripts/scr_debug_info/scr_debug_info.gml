@@ -22,6 +22,14 @@ function scr_debug_info(type, set_to){
 			position = 4;
 			str += "Darkness: " + set_to;
 		break;
+		case("Event Index"):
+			position = 5;
+			str += "Event Index: " + set_to;
+		break;
+		default:
+			position = 6;
+			str += string(set_to);
+		break;
 	}
 	
 	ds_list_set(objGeneral.debug_list, position, str);

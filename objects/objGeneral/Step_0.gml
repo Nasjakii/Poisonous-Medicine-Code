@@ -50,6 +50,8 @@ if keyboard_check_released(vk_f4) {
 
 
 //Debug Mode
+scr_debug_info("Event Index", global.event_index);
+
 if keyboard_check_released(vk_f5) {
 	draw_debug = scr_toggle(draw_debug);
 }
@@ -66,4 +68,5 @@ if keyboard_check_released(vk_f6) {
 global.game_step++;
 
 
-global.event_index = 0;
+
+
