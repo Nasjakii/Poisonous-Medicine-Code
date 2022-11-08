@@ -1,0 +1,1 @@
+scr_create_object(0,1);

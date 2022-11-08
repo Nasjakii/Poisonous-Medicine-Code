@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objCameraController",
-  "spriteId": null,
+  "name": "objChest",
+  "spriteId": {
+    "name": "sprChest",
+    "path": "sprites/sprChest/sprChest.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -23,12 +26,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cameras",
-    "path": "folders/Objects/Cameras.yy",
+    "name": "Interactable Objects",
+    "path": "folders/Objects/Interactable Objects.yy",
   },
 }

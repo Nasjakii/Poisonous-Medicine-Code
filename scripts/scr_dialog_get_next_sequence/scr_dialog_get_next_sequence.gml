@@ -8,7 +8,7 @@ function scr_dialog_get_next_sequence(curr_index, dialog_arr){
 		
 	}
 	
-	//something went wrong
+	//something went wrong or has no forced dialog
 	scr_error("Dialog get next Sequence", curr_index);
-	return 0;
+	return 999;
 }

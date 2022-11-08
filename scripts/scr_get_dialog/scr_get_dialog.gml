@@ -9,7 +9,7 @@ function scr_get_dialog(object_name, kind = ""){
 	}
 	
 	
-	var re_array;
+	var re_array = [];
 	for(var i = 0; i < ds_map_size(c_map); i++) {
 		
 		var key = string(i) + kind;

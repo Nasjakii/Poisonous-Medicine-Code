@@ -1,5 +1,4 @@
 
-scr_create_object(false, true, 1);
+scr_create_subject("Person4");
 
-text_arr[0] = "Mello";
-text_arr[1] = "Dello";
+

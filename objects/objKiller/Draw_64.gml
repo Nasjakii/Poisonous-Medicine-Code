@@ -2,8 +2,8 @@
 
 if monolog {
 	state = state_talking;
-	
-	scr_draw_dialog(text_arr[dialog]);
+	//TODO Killer object ? -> killer dialog
+	scr_draw_dialog();
 	
 	if dialog_active == false {
 		

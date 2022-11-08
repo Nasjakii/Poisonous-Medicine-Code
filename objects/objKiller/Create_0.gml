@@ -1,8 +1,6 @@
 
 scr_create_single_object(objCameraController);
 
-
-
 scr_spawn_player();
 
 

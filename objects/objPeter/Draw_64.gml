@@ -2,7 +2,7 @@
 
 if interact {
 
-	scr_draw_dialog(text_arr[dialog]);
+	scr_draw_dialog();
 	
 } else {
 	

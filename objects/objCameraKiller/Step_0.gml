@@ -25,14 +25,8 @@ if pos_changed {
 			if scrInBounds(follow_object.x,follow_object.y,
 						   view_x[i], view_y[i], view_x[i] + view_w[i], view_y[i] + view_h[i]) {
 				
-				//Destroy all views and cameras
-				var i2;
-				for(i2 = 0; i2 <= 7; i2++) {
-					if view_visible[i2] == true {
-						view_visible[i2] = false;
-						camera_destroy(view_camera[i2]);
-					}
-				}
+				
+				scr_cameras_reset();
 				
 				//Set new View
 				view_visible[i] = true;

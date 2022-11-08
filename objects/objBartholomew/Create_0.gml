@@ -1,6 +1,6 @@
 
 
-scr_create_victim(true);
+scr_create_victim("Bartholomew");
 
 #region state dead
 
@@ -21,11 +21,5 @@ scr_create_victim(true);
 
 state = state_idle;
 
-#region Dialouge
-	text_arr = scr_get_dialog("Bartholomew");
-	
-	dialog = 0;
-	dialog_active = false;
-#endregion
 
 

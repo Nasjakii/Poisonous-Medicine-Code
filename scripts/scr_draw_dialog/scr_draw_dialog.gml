@@ -1,5 +1,5 @@
 
-function scr_draw_dialog(dialog_index){
+function scr_draw_dialog(d_index = dialog_index){
 	
 	#region Variablen Instanziieren
 	
@@ -18,9 +18,15 @@ function scr_draw_dialog(dialog_index){
 		if special_interact_index <= global.event_index {
 			text = special_arr[special_interact_index];
 			//special camera
-			scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
+			
+			//scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
 		} else {
-			text = text_arr[dialog_index];
+
+			if text_arr != 0 {
+				text = text_arr[d_index];
+			} else {
+				text[0] = "";
+			}
 		}
 	#endregion
 	
@@ -62,6 +68,9 @@ function scr_draw_dialog(dialog_index){
 			//End Dialog
 			interact = false;
 			talking = false;
+			
+			//
+			special_interact_index++;
 		
 			//if was interacted with an item
 			item_interacted_with = -1;

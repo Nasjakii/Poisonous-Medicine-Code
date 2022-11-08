@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objVictim1",
+  "name": "objBartholomew",
   "spriteId": {
     "name": "sprVictim1",
     "path": "sprites/sprVictim1/sprVictim1.yy",

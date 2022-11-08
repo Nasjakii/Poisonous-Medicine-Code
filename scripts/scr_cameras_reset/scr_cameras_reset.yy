@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_create_inline",
+  "name": "scr_cameras_reset",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Physic",
-    "path": "folders/Scripts/Physic.yy",
+    "name": "Camera",
+    "path": "folders/Scripts/Camera.yy",
   },
 }

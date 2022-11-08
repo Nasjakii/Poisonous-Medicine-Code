@@ -1,5 +1,6 @@
-function scr_create_victim(interactable){
-	scr_create_object(false, interactable, 1);
+function scr_create_victim(name){
+	
+	scr_create_subject(name);
 	
 	
 	item_interacted_with = -1;
