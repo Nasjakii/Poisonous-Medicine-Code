@@ -3,39 +3,55 @@ function scr_draw_dialog(d_index = dialog_index){
 	
 	#region Variablen Instanziieren
 	
+		//look of the text
 		if !variable_instance_exists(id, "pretty_str_index") {
 			pretty_str_index = 0;
 		} else {
 			pretty_str_index++;
 		}
+		
+		//What page you are on
 		if !variable_instance_exists(id, "text_page") {
 			text_page = 0;
+		} 
+		
+		//Dialog type default
+		if !variable_instance_exists(id, "dialog_type") {
+			dialog_type = "End";
 		} 
 	#endregion
 	
 	
-	#region special interact
+	#region Load text
+
+		
 		if special_interact_index <= global.event_index {
+			dialog_type = "Special"; //special interact
+			
 			text = special_arr[special_interact_index];
 			//special camera
-			
 			//scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
 		} else {
-
-			if text_arr != 0 {
+			if array_length(text_arr) > d_index && text_arr != 0 {
+				dialog_type = "Normal"; //normal interact
+				
 				text = text_arr[d_index];
 			} else {
+				dialog_type = "End"; //TODO Enddialog	
 				text[0] = "";
 			}
+			
 		}
 	#endregion
 	
+	
 	//Setup
 	talking = true;
-	var sprite = profile;
 	objKiller.dialog = true;
 
-	#region Text positions and font
+	#region Text positions, font and profile
+		var sprite = profile;
+	
 		var xpos = (gui_width - sprite_get_width(sprDialogWindow)) / 2;
 		var ypos = gui_height - sprite_get_height(sprDialogWindow);
 
@@ -49,12 +65,13 @@ function scr_draw_dialog(d_index = dialog_index){
 		scr_reset_text();
 	#endregion
 	
-	
-	//Quick draw text
-	if keyboard_check_direct(vk_space) {
-		//double speed
-		pretty_str_index++;
-	}
+	#region comfort
+		//Quick draw text
+		if keyboard_check_direct(vk_space) {
+			//double speed
+			pretty_str_index++;
+		}
+	#endregion
 	
 	//Next page
 	if keyboard_check_released(vk_space) && pretty_str_index >= string_length(text[text_page]){
@@ -64,20 +81,44 @@ function scr_draw_dialog(d_index = dialog_index){
 		//go to next page if its not the last
 		if text_page < array_length(text) - 1 {
 			text_page++;
-		} else {		
-			//End Dialog
-			interact = false;
-			talking = false;
+		} else {	
+			//if it was the last page end the dialog
+			dialog_index++;
+			scr_safe("Real", name, "dialog_index", dialog_index);
 			
-			//
-			special_interact_index++;
-		
+			
+			switch(dialog_type) {
+				case("Special"):
+					//next special_interact
+					special_interact_index = scr_dialog_get_next_sequence(dialog_index, special_arr);
+				break;
+				case("Normal"):
+					
+				break;
+				case("End"):
+				
+				break;
+			}
+			
+			
 			//if was interacted with an item
 			item_interacted_with = -1;
 
-			//Reset to page 0
-			text_page = 0;
-			objKiller.dialog = false;
+			#region Reset
+				//Reset to page 0
+				text_page = 0;
+				
+				//End Dialog
+				interact = false;
+				talking = false;
+				
+				//for player
+				with(objKiller) {
+					monolog = false 
+					dialog = false;
+					state = state_idle;
+				}
+			#endregion
 
 		}
 	}

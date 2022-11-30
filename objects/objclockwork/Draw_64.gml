@@ -13,16 +13,12 @@ if interact {
 		
 		
 		//Start timer so you have time left until the assistent notices
-		scr_event_add("Clockwork", true);
+
 		
 
 	}
 	
-	if scr_event_equals("Clockwork", true) {
-		draw_sprite(sprCog1, 1, gui_width / 2, gui_height / 2);
-		draw_sprite(sprWranch, 1, gui_width / 2, gui_height / 2);
-	}
-	
+
 	
 	with(objKiller) {
 		state = state_idle;

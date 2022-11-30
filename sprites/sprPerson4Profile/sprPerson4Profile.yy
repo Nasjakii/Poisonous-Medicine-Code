@@ -69,7 +69,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Person4",
-    "path": "folders/Sprites/Subjects/NPC/Person4.yy",
+    "name": "Mary",
+    "path": "folders/Sprites/Subjects/NPC/Mary.yy",
   },
 }

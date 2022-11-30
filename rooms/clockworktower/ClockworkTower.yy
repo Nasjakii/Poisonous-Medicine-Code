@@ -30,7 +30,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4A0E8ADD","properties":[],"isDnd":false,"objectId":{"name":"objView1","path":"objects/objView1/objView1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":540.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2DB626B0","properties":[],"isDnd":false,"objectId":{"name":"objView1","path":"objects/objView1/objView1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":270.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_15D6DCFC","properties":[],"isDnd":false,"objectId":{"name":"objView1","path":"objects/objView1/objView1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+      ],"visible":false,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B2D78C5","properties":[],"isDnd":false,"objectId":{"name":"objWranch","path":"objects/objWranch/objWranch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":764.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_D27F2C6","properties":[],"isDnd":false,"objectId":{"name":"objClockwork","path":"objects/objClockwork/objClockwork.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":156.0,},
@@ -85,7 +85,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Part1",
-    "path": "folders/Rooms/Part1.yy",
+    "name": "Clockwork",
+    "path": "folders/Rooms/Part1/Clockwork.yy",
   },
 }

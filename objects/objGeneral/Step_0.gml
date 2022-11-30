@@ -62,6 +62,13 @@ if keyboard_check_released(vk_f6) {
 	objKiller.y = mouse_y;
 }
 
+if keyboard_check_pressed(vk_right) {
+	global.event_index++;
+}
+
+if keyboard_check_pressed(vk_left) {
+	global.event_index--;
+}
 
 #endregion
 

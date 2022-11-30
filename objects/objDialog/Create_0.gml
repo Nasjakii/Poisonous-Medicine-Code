@@ -131,8 +131,40 @@
 		#region English
 			//Writing
 			var dialog_content_arr = [];
+			dialog_content_arr[0,0] = "F";
+			dialog_content_arr[0,1] = "P1 E";
+
+			ds_map_add_map(character_map[0], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
+
+		#endregion
+		#region German
+	
+			//Writing
+			var dialog_content_arr = [];
+			dialog_content_arr[0,0] = "F";
+			dialog_content_arr[0,1] = "P1 G";
+	
+			//Adding
+			ds_map_add_map(character_map[1], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
+
+		#endregion
+		
+		
+	#endregion
+	
+	#region Mary
+		var obj_name = "Mary";
+		#region English
+			//Writing
+			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "";
-			dialog_content_arr[0,1] = "Hello, I am Peter";
+			dialog_content_arr[0,1] = "W1 E";
+			
+			dialog_content_arr[1,0] = "";
+			dialog_content_arr[1,1] = "W2 E";
+			
+			dialog_content_arr[2,0] = "";
+			dialog_content_arr[2,1] = "W3 E";
 
 			ds_map_add_map(character_map[0], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
 
@@ -142,14 +174,19 @@
 			//Writing
 			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "";
-			dialog_content_arr[0,1] = "Hallo, ich bin Peter";
+			dialog_content_arr[0,1] = "W1 G";
+			
+			dialog_content_arr[1,0] = "";
+			dialog_content_arr[1,1] = "W2 G";
+			
+			dialog_content_arr[2,0] = "";
+			dialog_content_arr[2,1] = "W3 G";
 	
 			//Adding
 			ds_map_add_map(character_map[1], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
 
 		#endregion
-		
-		
+	
 	#endregion
 	
 	

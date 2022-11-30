@@ -1,4 +1,4 @@
-function scr_door_rooms(room1, pos1, room2, pos2){
+function scr_door_rooms(room1, pos1, room2, pos2, door1 = id, door2 = id){
 	
 	//pos = relative position to the door, left right or middle
 	
@@ -7,12 +7,12 @@ function scr_door_rooms(room1, pos1, room2, pos2){
 	if room_exists(room1) && room_exists(room2) {
 		if room == room1 {
 
-			o.killer_spawn_object = id.object_index;
+			o.killer_spawn_object = door1.object_index;
 			o.killer_spawn_pos = pos2;
 			room_goto(room2);
 		} else {
 			
-			o.killer_spawn_object = id.object_index;
+			o.killer_spawn_object = door2.object_index;
 			o.killer_spawn_pos = pos1;
 			room_goto(room1);
 		}

@@ -1,0 +1,108 @@
+skeleton.png
+size:486,78
+filter:Linear,Linear
+pma:true
+Arm Upper and Lower/Arm Lower Left
+bounds:463,7,18,20
+offsets:83,153,140,221
+Arm Upper and Lower/Arm Lower Right
+bounds:465,38,17,19
+offsets:31,152,140,221
+rotate:90
+Arm Upper and Lower/Arm Upper Left
+bounds:440,4,22,21
+offsets:70,164,140,221
+rotate:90
+Arm Upper and Lower/Arm Upper Right
+bounds:442,29,21,22
+offsets:39,163,140,221
+Different Slots/Jacob Head
+bounds:346,3,20,30
+rotate:90
+Different Slots/Jacob Head Front
+bounds:314,2,21,30
+rotate:90
+Extensions/151f21e9-d84d-49bf-9c06-a4392919f3a9 - Kopie
+bounds:2,17,127,59
+offsets:0,0,128,62
+Extensions/Square3
+bounds:131,17,128,32
+offsets:0,0,128,128
+Extensions/cc013941-d987-4d2f-b00e-2196fb54c50a
+bounds:131,51,25,230
+offsets:15,5,50,245
+rotate:90
+Extensions/sprPotion1
+bounds:378,3,20,30
+rotate:90
+Extensions/sprPotionFluid
+bounds:462,57,18,19
+offsets:1,1,20,30
+Extensions/sprUnsetItem
+bounds:314,25,32,24
+Foot Left
+bounds:216,4,20,11
+offsets:67,89,140,221
+Hand Left
+bounds:443,55,17,21
+offsets:92,141,140,221
+Hand Right
+bounds:295,4,17,16
+offsets:23,142,140,221
+Head
+bounds:410,2,22,28
+offsets:53,190,140,221
+rotate:90
+Jacket/Jacket1/Jacket1
+bounds:363,25,27,51
+offsets:52,138,140,221
+Jacket/Jacket1/Jacket1 Arm Upper Left
+bounds:418,53,23,23
+offsets:70,163,140,221
+Jacket/Jacket1/Jacket1 Arm Upper Right
+bounds:418,28,23,22
+offsets:37,164,140,221
+rotate:90
+Jacket/Jacket2
+bounds:261,22,27,51
+offsets:52,138,140,221
+rotate:90
+Leg Lower Left
+bounds:100,5,10,27
+offsets:67,96,140,221
+rotate:90
+Leg Lower Right
+bounds:129,5,10,27
+offsets:54,96,140,221
+rotate:90
+Leg Upper Left
+bounds:36,2,13,30
+offsets:64,114,140,221
+rotate:90
+Leg Upper Right
+bounds:68,2,13,30
+offsets:54,114,140,221
+rotate:90
+Neck
+bounds:238,2,13,11
+offsets:59,184,140,221
+rotate:90
+Torso
+bounds:392,26,24,50
+offsets:53,138,140,221
+Trouser/Trouser Lower Left
+bounds:158,5,10,27
+offsets:67,96,140,221
+rotate:90
+Trouser/Trouser Lower Right
+bounds:187,5,10,27
+offsets:54,96,140,221
+rotate:90
+Trouser/Trouser Upper Left
+bounds:261,6,14,32
+offsets:63,112,140,221
+rotate:90
+Trouser/Trouser Upper Right
+bounds:2,2,13,32
+offsets:54,112,140,221
+rotate:90

@@ -1,13 +1,3 @@
 
 
-if interact {
-
-	scr_draw_dialog();
-	
-} else {
-	
-	//scr_random_movement(100, 500);
-	
-	//if interacting with door in tutorial forced dialog
-	
-}
+scr_subject_talk();

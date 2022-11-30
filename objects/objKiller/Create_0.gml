@@ -1,6 +1,8 @@
 
 scr_create_single_object(objCameraController);
 
+scr_player_monolog_create();
+
 scr_spawn_player();
 
 
@@ -208,6 +210,7 @@ sin_x = 0;
 			
 			if dialog_active == false {
 				state = state_idle;
+				can_move = true;
 			}
 		}
 	#endregion

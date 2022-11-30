@@ -35,11 +35,9 @@ global.show_book = false;
 	scr_add_item(sprSyringe, objSyringe, 1,1,1);
 	scr_add_item(sprTartaremetic, objTartaremetic, 0, 1, 1);
 	scr_add_item(sprPotion1, objPotion1, 1, 0, 1, 0.1);
-	scr_add_item(sprPotion2, objPotion2, 1, 0, 1, 0.1);
-	scr_add_item(sprPotion3, objPotion3, 1, 0, 1, 0.1);
-	scr_add_item(sprPotion4, objPotion4, 1, 0, 1, 0.2);
-	scr_add_item(sprPotion5, objPotion5, 1, 0, 1, 0.3);
-	scr_add_item(sprPotion6, objPotion6, 1, 0, 1, 0.4);
+	
+	scr_add_item(sprHandlamp, objHandlamp, 1,0);
+
 
 	
 	scr_safe_inventory();

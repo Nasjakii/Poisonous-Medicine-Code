@@ -3,7 +3,6 @@ function scr_special_camera_reset(){
 	//TODO verbindung zu Camera controller
 	
 	//view_camera[0] = camera_create_view(0,0,1920,1080);
-	objKiller.can_move = true;
 	
 	if instance_exists(objCameraSpecial) {
 		

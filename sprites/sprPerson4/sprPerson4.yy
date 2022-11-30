@@ -5,7 +5,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 1,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -58,7 +58,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
+    "xorigin": 23,
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Person4",
-    "path": "folders/Sprites/Subjects/NPC/Person4.yy",
+    "name": "Mary",
+    "path": "folders/Sprites/Subjects/NPC/Mary.yy",
   },
 }

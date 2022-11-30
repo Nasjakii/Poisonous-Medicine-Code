@@ -1,7 +1,14 @@
 
+//Graphik settings
+display_set_gui_size(1920, 1080);
+
 selected_bottle = 0;
 fillheight = 0;
+fillheight_max = 26 * objTestTube.image_yscale;
 
+fillheight_increment = 5 * objTestTube.image_yscale;
+
+//Ingredients
 ds_bottles[1] = objPotion1;
 ds_bottles[2] = objPotion2;
 ds_bottles[3] = objPotion3;
@@ -15,8 +22,16 @@ ds_colorList = ds_list_create();
 
 mix_color = make_color_rgb(255,255,255);
 
+//3 seconds of cooking to be finished each time
+cooking = false;
+cooking_time = 3 * room_speed;
+cooked_timer = cooking_time;
 
-display_set_gui_size(3840, 2160);
+
+//Notes
+draw_notes = false;
+
+
 
 
 

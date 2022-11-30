@@ -9,7 +9,6 @@ function scr_draw_outline(){
 	
 	shader_set_uniform_f(uniform_Handle, texel_width, texel_height);
 	
-
 	draw_self();
 	shader_reset();
 }

@@ -45,7 +45,7 @@ global.inventory_size = 20;
 #endregion
 
 
-global.interactable_show_distance = 50;
+global.interactable_show_distance = 128;
 
 global.game_step = 0;
 global.rain = false;
@@ -54,6 +54,7 @@ global.day_time = 0;
 #region macro
 
 #macro l_click mouse_check_button_released(mb_left)
+#macro l_press mouse_check_button_pressed(mb_left)
 #macro r_click mouse_check_button_released(mb_right)
 #macro debug show_debug_message(string(
 #macro check show_debug_message("Check")
@@ -67,9 +68,7 @@ global.day_time = 0;
 
 #region Eventsystem
 
-	event_map = ds_map_create();
-
-	global.event_index = 2;
+	scr_create_single_object(objEventManager)
 	
 	
 #endregion

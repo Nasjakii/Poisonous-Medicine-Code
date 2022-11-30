@@ -1,4 +1,12 @@
 
+[0] = "Sprite";
+[1] = "Object";
+[2] = "Interactable";
+[3] = "Collectable";
+[4] = "Count";
+
+[5] = "Poison_Level";
+
 
 scr_get_inventory - 
 scr_load_inventory - 

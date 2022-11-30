@@ -22,8 +22,8 @@ if interact == true {
 
 
 	if keyboard_check(vk_space) {
-		room_speed = 1000;
-		//global.day_time += 20;
+		//room_speed = 1000;
+		global.day_time += 20;
 	} else {
 		room_speed = 60;
 	}

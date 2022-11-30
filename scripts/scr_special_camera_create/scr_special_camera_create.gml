@@ -11,8 +11,6 @@ function scr_special_camera_create(x1,y1,x2) {
 		}
 
 		
-		objKiller.can_move = false;
-		
 		if !layer_exists("Views") layer_create(-1, "Views");
 		
 		var inst = instance_create_layer(x1,y1,"Views", objViewSpecial);

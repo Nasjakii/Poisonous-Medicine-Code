@@ -2,7 +2,7 @@ x = objKiller.x;
 y = objKiller.y;
 
 
-if keyboard_check_pressed(vk_up) {
+if keyboard_check_pressed(vk_up) && !instance_exists(objCameraMan) {
 	curr_view = "Camera";
 	
 	camera_uplook = scr_create_single_object(objCameraMan);
@@ -16,12 +16,11 @@ if keyboard_check_pressed(vk_up) {
 
 switch(curr_view) {
 	case("Player"):
-		//objKiller.can_move = true;
-		scr_create_single_object(objCameraKiller);
+		if !instance_exists(objCameraKiller) instance_create_depth(0,0,0,objCameraKiller);
 	break;
 	case("Camera"):
 		//cant look up while walking
-		objKiller.can_move = false;
+		objKiller.state = objKiller.state_idle;
 		
 		//needs to be created with the current view 
 		view_visible[0] = true;

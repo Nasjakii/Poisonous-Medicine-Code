@@ -34,56 +34,55 @@ for(i = 0; i < ds_list_size(objGeneral.list_of_collectables); i++) {
 
 #endregion
 
+
 #region Interactables
 
 //go through all interactables
+var highest_inst = 0;
+
 for(var i = 0; i < ds_list_size(objGeneral.list_of_interactables); i++) {
 	
 	var inst = ds_list_find_value(objGeneral.list_of_interactables, i);
-	
+
 	//instance exists && character in Range 
 	if instance_exists(inst) && scr_in_range(inst) {
 		
 		//draw inline
 		with(inst) {
-			scr_draw_inline();
+			draw_outline = true;
 		}
 		
-	   //interact
+	   //all instances that are clicked are compared
 	   if scrInBounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
-				
-				//doesnt want to talk and is a victim
-			if item_holding != -1 && scr_get_victim(inst) {
-				using_item_kind = scr_animation_using(item_holding);
-				state = state_using;
-			}
 			
-			//interact
-			dialog = scr_subject_talking(inst);
-			
-			with(inst) {
-				interact = true;
-			}
-			
+			if highest_inst == 0 || highest_inst.depth > inst.depth highest_inst = inst;
 
 	   }
-	} else {
-		with(inst) {
-			draw_self();
-		}
+	} 
+}
+
+//only click the highest inst
+if highest_inst != 0 {
+	//doesnt want to talk and is a victim
+	if item_holding != -1 && scr_get_victim(inst) {
+		using_item_kind = scr_animation_using(item_holding);
+		state = state_using;
 	}
+	
+	//interact
+	dialog = scr_subject_talking(inst);
+	
+	with(highest_inst) {
+		interact = true;
+	}
+	highest_inst = 0;
 }
 
 #endregion
 
 
-#region draw self
-	
-	
-	
-	draw_self();
 
-#endregion
+draw_self();
 
 
 #region draw items holding

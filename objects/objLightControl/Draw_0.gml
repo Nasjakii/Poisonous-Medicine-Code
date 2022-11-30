@@ -49,7 +49,7 @@ if darkness_effect > 0.5 {
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,  image_yscale, 0, c_white, 1);
 			gpu_set_blendmode(bm_add);
-			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,  image_yscale, 0, color, intensity);
+			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale,  image_yscale, 0, c_white, 1);
 		
 			gpu_set_blendmode(bm_normal);
 		}

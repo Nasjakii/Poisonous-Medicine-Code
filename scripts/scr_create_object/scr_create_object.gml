@@ -2,11 +2,13 @@
 function scr_create_object(collectable, interactable, outline = 1){
 	if collectable == true {
 		ds_list_add(objGeneral.list_of_collectables, id);
+		draw_outline = false;
 		
 	}
 	if interactable == true {
 		ds_list_add(objGeneral.list_of_interactables, id);
 		interact = false;
+		draw_outline = false;
 		
 	}
 	
