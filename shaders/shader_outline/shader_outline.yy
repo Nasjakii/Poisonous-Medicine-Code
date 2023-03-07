@@ -1,11 +1,10 @@
 {
-  "type": 1,
+  "resourceType": "GMShader",
+  "resourceVersion": "1.0",
+  "name": "shader_outline",
   "parent": {
     "name": "Shaders",
     "path": "folders/Shaders.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "shader_outline",
-  "tags": [],
-  "resourceType": "GMShader",
+  "type": 1,
 }

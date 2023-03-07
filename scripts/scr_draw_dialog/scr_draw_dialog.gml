@@ -23,14 +23,14 @@ function scr_draw_dialog(d_index = dialog_index){
 	
 	
 	#region Load text
-
-		
+		var text = [];
 		if special_interact_index <= global.event_index {
-			dialog_type = "Special"; //special interact
+			if dialog_type != "Special" dialog_type = "Special"; //special interact
 			
 			text = special_arr[special_interact_index];
 			//special camera
-			//scr_special_camera_create(bbox_left - 150, bbox_top - 60, bbox_right + 150);
+			scr_camera_set("Special", id);
+
 		} else {
 			if array_length(text_arr) > d_index && text_arr != 0 {
 				dialog_type = "Normal"; //normal interact
@@ -42,6 +42,8 @@ function scr_draw_dialog(d_index = dialog_index){
 			}
 			
 		}
+	
+
 	#endregion
 	
 	
@@ -82,18 +84,20 @@ function scr_draw_dialog(d_index = dialog_index){
 		if text_page < array_length(text) - 1 {
 			text_page++;
 		} else {	
-			//if it was the last page end the dialog
-			dialog_index++;
 			scr_safe("Real", name, "dialog_index", dialog_index);
 			
 			
 			switch(dialog_type) {
 				case("Special"):
 					//next special_interact
-					special_interact_index = scr_dialog_get_next_sequence(dialog_index, special_arr);
+					special_interact_index++; //solution to infinite loop and next sequence not possible
+					special_interact_index = scr_dialog_get_next_sequence(special_interact_index, special_arr);
+					scr_safe("Real", name, "special_interact_index", special_interact_index);
 				break;
 				case("Normal"):
-					
+					//if it was the last page end the dialog
+					dialog_index++;
+					scr_safe("Real", name, "dialog_index", dialog_index);
 				break;
 				case("End"):
 				
@@ -108,9 +112,12 @@ function scr_draw_dialog(d_index = dialog_index){
 				//Reset to page 0
 				text_page = 0;
 				
+				
+				scr_camera_set("Player", id);
 				//End Dialog
 				interact = false;
 				talking = false;
+				
 				
 				//for player
 				with(objKiller) {

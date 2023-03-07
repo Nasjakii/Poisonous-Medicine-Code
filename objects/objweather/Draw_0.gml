@@ -1,4 +1,5 @@
 
+new_view = view_current; //draw only var
 
 for(var i = 0; i < ds_list_size(list_drop_x); i++) {
 	var ypos = ds_list_find_value(list_drop_y,i);

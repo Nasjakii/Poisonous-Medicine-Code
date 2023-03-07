@@ -106,6 +106,32 @@ global.show_book = false;
 	page_right_x2 = page_right_x + book_page_width; //Right page right x
 	
 	page_up_y = book_page_yoffset; //Page upper y
+	page_down_y = page_up_y + book_page_height;
+	
+	#endregion
+	
+	#region triangle positions / next page, page before
+		
+		//dimensions of the triangles
+		var triangle_width = 100;
+		var triangle_height = 100;
+	
+		//ordered in reading direction (left -> right, up -> down)
+		triangle_left_x[0] = page_left_x;
+		triangle_left_x[1] = page_left_x + triangle_width;
+		triangle_left_x[2] = page_left_x + triangle_width;
+		
+		triangle_left_y[0] = page_down_y - triangle_height;
+		triangle_left_y[1] = page_down_y - triangle_height;
+		triangle_left_y[2] = page_down_y;
+		
+		triangle_right_x[0] = page_right_x2 - triangle_width;
+		triangle_right_x[1] = page_right_x2;
+		triangle_right_x[2] = page_right_x2 - triangle_width;
+		
+		triangle_right_y[0] = page_down_y - triangle_height;
+		triangle_right_y[1] = page_down_y - triangle_height;
+		triangle_right_y[2] = page_down_y;
 	
 	#endregion
 	
@@ -131,16 +157,9 @@ global.show_book = false;
 	
 	#region Quest Chapter
 	
-	//Delete later
-	scr_quest_set_state("Kill Bartholomew", 0);
 
 	quest_page = 0;
 	active_quests = scr_quest_get_all_active();
-	
-	
-	
-	
-	
 	
 	#endregion
 

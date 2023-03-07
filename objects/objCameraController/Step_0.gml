@@ -2,6 +2,8 @@ x = objKiller.x;
 y = objKiller.y;
 
 
+
+
 if keyboard_check_pressed(vk_up) && !instance_exists(objCameraMan) {
 	curr_view = "Camera";
 	
@@ -13,6 +15,7 @@ if keyboard_check_pressed(vk_up) && !instance_exists(objCameraMan) {
 	scr_cameras_reset();
 }
 
+scr_debug_info("Camera mode", "Camera mode: " + curr_view);
 
 switch(curr_view) {
 	case("Player"):
@@ -56,7 +59,10 @@ switch(curr_view) {
 		}
 	break;
 	case("Special"):
-	
+		if special_object != -1 {
+			var o = special_object;
+			scr_special_camera_create(o.bbox_left - 150, o.bbox_top - 50, o.bbox_right + 150);
+		}
 	break;
 	default:
 		scr_error("Not a valid Camera", curr_view);

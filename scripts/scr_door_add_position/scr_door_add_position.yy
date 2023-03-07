@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_door_add_position",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Short",
-    "path": "folders/Scripts/Short.yy",
+    "name": "Doors",
+    "path": "folders/Scripts/Short/Doors.yy",
   },
 }

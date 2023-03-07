@@ -117,26 +117,43 @@ if global.show_book == true {
 					objGuiController.sprBookIcon_subimg = 0;
 					
 					draw_set_color(c_white);
-					var xpos = page_right_x2 + 10;
-					var ypos = book_page_yoffset+book_page_height - 10;
-				
-					var hitbox = point_in_triangle(mouse_x_gui, mouse_y_gui, xpos - 65, ypos + 118, xpos - 65, ypos + 50, xpos,ypos + 50);
-					if hitbox && mouse_check_button_released(mb_left) {
+					//hitbox that leads to new quest page
+					draw_triangle(triangle_right_x[0], triangle_right_y[0],
+								  triangle_right_x[1], triangle_right_y[1],
+								  triangle_right_x[2], triangle_right_y[2], false);
+					
+					var hitbox_next_page = point_in_triangle(mouse_x_gui, mouse_y_gui,triangle_right_x[0],triangle_right_y[0], triangle_right_x[1], triangle_right_y[1], triangle_right_x[2], triangle_right_y[2]);
+					if hitbox_next_page && mouse_check_button_released(mb_left) && quest_page < ds_list_size(active_quests) / 2 - 1 {
 						quest_page++;
+					}
+					
+					draw_triangle(triangle_left_x[0], triangle_left_y[0],
+								  triangle_left_x[1], triangle_left_y[1],
+								  triangle_left_x[2], triangle_left_y[2], false);
+					
+					
+					var hitbox_before_page = point_in_triangle(mouse_x_gui, mouse_y_gui,triangle_left_x[0],triangle_left_y[0], triangle_left_x[1], triangle_left_y[1], triangle_left_x[2], triangle_left_y[2]);
+					if hitbox_before_page && mouse_check_button_released(mb_left) && quest_page > 0 {
+						quest_page--;
 					}
 					
 					//Reload active quests
 					active_quests = scr_quest_get_all_active();
 					
+					
+					
+					//draw Quest
 					var pos = "left";
 					for(var i = 0; i < ds_list_size(active_quests); i++) {
-						if (i mod 2 = 0) {
+						if (i mod 2 == 0) {
 							pos = "left";
 						} else {
 							pos = "right";
 						}
 						
-						scr_draw_quest_page(ds_list_find_value(active_quests,i), pos);
+						if quest_page * 2 == i || quest_page * 2 + 1 == i {
+							scr_draw_quest_page(ds_list_find_value(active_quests,i), pos);
+						}
 					}
 					
 					
@@ -147,17 +164,20 @@ if global.show_book == true {
 				
 			break;
 			case(5):
-				//Settings
-				draw_set_color(c_white);
-				var xpos = page_right_x2;
-				var ypos = book_page_yoffset+book_page_height;
+			
+				#region Settings
+					
+					draw_set_color(c_white);
+					var xpos = page_right_x2;
+					var ypos = book_page_yoffset+book_page_height;
 				
-				//draw_triangle(xpos - 70, ypos - 95, xpos + 15, ypos - 95, xpos - 70,ypos, true);
-				var hitbox = point_in_triangle(mouse_x_gui, mouse_y_gui, xpos - 70, ypos - 95, xpos + 15, ypos - 95, xpos - 70,ypos);
-				if hitbox && mouse_check_button_released(mb_left) {
-					room_goto(Menu);
-				}
+					//draw_triangle(xpos - 70, ypos - 95, xpos + 15, ypos - 95, xpos - 70,ypos, true);
+					var hitbox = point_in_triangle(mouse_x_gui, mouse_y_gui, xpos - 70, ypos - 95, xpos + 15, ypos - 95, xpos - 70,ypos);
+					if hitbox && mouse_check_button_released(mb_left) {
+						room_goto(Menu);
+					}
 				
+				#endregion
 			break;
 			
 		}

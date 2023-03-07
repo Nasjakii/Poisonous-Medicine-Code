@@ -46,8 +46,6 @@ if position_meeting(x,bbox_bottom,objLedder2) && keyboard_check(ord("S")) {
 	state = state_climb_ledder;
 }
 	
-	
-
 
 
 

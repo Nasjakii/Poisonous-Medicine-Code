@@ -13,7 +13,7 @@ function scr_quest_map_create(name){
 	}
 	
 	
-	//Add keys like:
+	//Add keys in format:
 	
 	//Mission - Description
 	//Task - What to do

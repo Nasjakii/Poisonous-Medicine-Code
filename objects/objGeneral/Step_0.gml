@@ -44,7 +44,7 @@ if keyboard_check_released(vk_f3) {
 }
 
 if keyboard_check_released(vk_f4) {
-	global.rain = scr_toggle(global.rain);
+	global.rain = !global.rain;
 
 }
 
@@ -53,7 +53,7 @@ if keyboard_check_released(vk_f4) {
 scr_debug_info("Event Index", global.event_index);
 
 if keyboard_check_released(vk_f5) {
-	draw_debug = scr_toggle(draw_debug);
+	draw_debug = !draw_debug;
 }
 
 //Force Player here

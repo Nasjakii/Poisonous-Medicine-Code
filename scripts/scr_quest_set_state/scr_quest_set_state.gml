@@ -1,4 +1,8 @@
 
+//-1 inactive
+//0 active
+//1 completed
+
 function scr_quest_set_state(quest_name, state){
 	var quest_data_map = scr_quest_map(quest_name);
 	ds_map_set(quest_data_map, "Completed", state); //0 Says that the Quest is not completed

@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_safe",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Short",
-    "path": "folders/Scripts/Short.yy",
+    "name": "Saving data",
+    "path": "folders/Scripts/Tools/Saving data.yy",
   },
 }

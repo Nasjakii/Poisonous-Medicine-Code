@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Tools",
-    "path": "folders/Scripts/Tools.yy",
-  },
+  "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "set_animation",
-  "tags": [],
-  "resourceType": "GMScript",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Animations",
+    "path": "folders/Scripts/Short/Animations.yy",
+  },
 }

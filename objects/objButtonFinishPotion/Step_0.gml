@@ -1,5 +1,5 @@
 
-if mouse_check_button_pressed(mb_left) && scrInBounds(mouse_x, mouse_y, x,y,x+sprite_width,y+sprite_height) {
+if mouse_check_button_pressed(mb_left) && scr_in_bounds(mouse_x, mouse_y, x,y,x+sprite_width,y+sprite_height) {
 	xpos = mouse_x;
 	ypos = mouse_y;
 }

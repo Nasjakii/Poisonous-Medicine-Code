@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_map_clone",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Tools",
-    "path": "folders/Scripts/Tools.yy",
+    "name": "Maps",
+    "path": "folders/Scripts/Tools/Maps.yy",
   },
 }

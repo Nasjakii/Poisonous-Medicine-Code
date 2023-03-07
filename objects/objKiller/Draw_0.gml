@@ -8,13 +8,13 @@ for(i = 0; i < ds_list_size(objGeneral.list_of_collectables); i++) {
 	var inst = ds_list_find_value(objGeneral.list_of_collectables, i);
 	
 	//Object exists && character in Range 
-	if instance_exists(inst) && scr_in_range(inst) {
+	if instance_exists(inst) && scr_in_range(inst) && !global.show_book {
 	   
 	   with(inst) {
 			scr_draw_inline();
 		}
 	   //mouse over && l_click
-	   if scrInBounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
+	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
 			
 			var interactable = scr_is_interactable(inst.id);
 
@@ -45,15 +45,18 @@ for(var i = 0; i < ds_list_size(objGeneral.list_of_interactables); i++) {
 	var inst = ds_list_find_value(objGeneral.list_of_interactables, i);
 
 	//instance exists && character in Range 
-	if instance_exists(inst) && scr_in_range(inst) {
+	if instance_exists(inst) && scr_in_range(inst) && !global.show_book {
 		
 		//draw inline
 		with(inst) {
 			draw_outline = true;
 		}
+		if variable_instance_exists(inst, "item_interacted_with") {
+			inst.item_interacted_with = item_holding;
+		}
 		
 	   //all instances that are clicked are compared
-	   if scrInBounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
+	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
 			
 			if highest_inst == 0 || highest_inst.depth > inst.depth highest_inst = inst;
 

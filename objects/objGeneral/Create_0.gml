@@ -45,7 +45,7 @@ global.inventory_size = 20;
 #endregion
 
 
-global.interactable_show_distance = 128;
+global.interactable_show_distance = 64;
 
 global.game_step = 0;
 global.rain = false;

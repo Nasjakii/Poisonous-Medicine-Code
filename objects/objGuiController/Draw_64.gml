@@ -2,9 +2,10 @@
 
 
 #region Item selection
-			
+
+if instance_exists(objKiller) {
+
 	if keyboard_check(vk_tab) {
-		
 		
 		draw_set_alpha(circle_alpha);
 		draw_set_circle_precision(1000);
@@ -75,7 +76,7 @@
 	}
 	
 	
-//Select Item TODO rework when not hovered anymore remove item_hovered
+//Select Item    TODO rework when not hovered anymore remove item_hovered
 if (mouse_check_button_released(mb_left) && keyboard_check(vk_tab)) || keyboard_check_released(vk_tab) {
 	if item_hovered == sprHandItem {
 		objKiller.item_holding = -1;
@@ -86,15 +87,16 @@ if (mouse_check_button_released(mb_left) && keyboard_check(vk_tab)) || keyboard_
 }
 	
 	
-	
+}
+
 #endregion
 
 
 //Icon in the top-left corner
 draw_sprite(sprBookIcon, sprBookIcon_subimg, 0,0);
-if scrInBounds(mouse_x_gui, mouse_y_gui, 0,0,sprite_get_width(sprBookIcon), sprite_get_height(sprBookIcon)) 
+if scr_in_bounds(mouse_x_gui, mouse_y_gui, 0,0,sprite_get_width(sprBookIcon), sprite_get_height(sprBookIcon)) 
 	&& l_click {
-	global.show_book = scr_toggle(global.show_book);
+	global.show_book = !global.show_book;
 }
 
 

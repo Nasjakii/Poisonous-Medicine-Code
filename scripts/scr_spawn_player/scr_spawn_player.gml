@@ -8,7 +8,7 @@ function scr_spawn_player(){
 		switch(o.killer_spawn_pos) {
 			case("left"):
 				x = o.killer_spawn_object.bbox_left;
-				debug x));
+				
 			break;
 			case("right"):
 				x = o.killer_spawn_object.bbox_right;

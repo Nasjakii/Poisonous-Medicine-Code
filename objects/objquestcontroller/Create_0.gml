@@ -1,13 +1,10 @@
 
 //Load all Quest states
-
-scr_quest_load();
+quest_map = ds_map_create();
+quest_map = scr_quest_load();
 
 //var load_map = ds_map_secure_load("quest_data.dat");
 //var load_quest_data_map = ds_map_find_value(load_map, "First_Quest");
-
-
-quest_map = ds_map_create();
 
 
 var quest_name = "First_Quest";
@@ -34,6 +31,16 @@ scr_quest_map_add_key(quest_name, "Type", "Kill");
 scr_quest_map_add_key(quest_name, "Task", "Go Kill this man, i hate him so much, aww man sooooooo much.");
 scr_quest_map_add_key(quest_name, "Picture", sprBartholomewHead);
 
+var quest_name = "Help Mary";
+scr_quest_map_create(quest_name);
+scr_quest_map_add_key(quest_name, "Type", "Potion");
+scr_quest_map_add_key(quest_name, "Task", "Make the Potion for Mary in the backroom");
+
+var quest_name = "Humphreys Headache";
+scr_quest_map_create(quest_name);
+scr_quest_map_add_key(quest_name, "Type", "Collect");
+scr_quest_map_add_key(quest_name, "Task", "Make the Potion for Humphrey against his headache");
+scr_quest_map_add_key(quest_name, "Objects", objPoppy);
 
 
 

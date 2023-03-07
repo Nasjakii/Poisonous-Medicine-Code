@@ -40,10 +40,16 @@ function scr_draw_quest_page(quest_map_name, side){
 			break;
 			case("Kill"):
 				right_border = 128;
-				picture_x = book_edge_x1 + book_page_width - right_border;
+				picture_x = xpos + book_page_width * 0.8 - right_border;
 				picture_y = book_page_yoffset + y_margin * 3;
 				
 				draw_sprite(quest_picture, 1, picture_x, picture_y);
+				
+			break;
+			case("Potion"):
+				draw_text(xpos + x_margin, page_up_y + 300, "Ingredient 1");
+				draw_text(xpos + x_margin, page_up_y + 340, "Ingredient 2");
+				draw_text(xpos + x_margin, page_up_y + 380, "Ingredient 3");
 				
 			break;
 			case("Default"):

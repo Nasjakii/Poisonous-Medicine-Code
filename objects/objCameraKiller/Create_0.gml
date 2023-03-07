@@ -10,14 +10,7 @@ display_set_gui_size(disp_width, disp_height);
 //Das zu verfolgende Objekt (Stellt die View auf das Objekt)
 scr_camera_killer_set(objKiller);
 
-//Check if follow_object moved
-follow_xb = global.camera_follow_object.x;
-follow_yb = global.camera_follow_object.y;
-
-
-//Counters the encourans of a flashing black screen in the middle of the first room because of first
-//checking that player moved in new view
-first_step = true; 
+curr_view_index = 0;
 
 view_x[0] = 0;
 view_y[0] = 0;

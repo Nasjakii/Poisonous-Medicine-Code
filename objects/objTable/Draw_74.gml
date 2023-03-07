@@ -98,7 +98,7 @@ for(var i = 0; i < inventory_size / 2; i++) {
 					var xpos2 = desk_array[i,0].bbox_right;
 					var ypos2 = desk_array[i,0].bbox_bottom;
 			
-					if scrInBounds(mouse_x,mouse_y,xpos,ypos,xpos2,ypos2) {
+					if scr_in_bounds(mouse_x,mouse_y,xpos,ypos,xpos2,ypos2) {
 						//Transfer attributes from object to array holding
 						item_holding = scr_list_to_array(desk_array[i,0].ds_list_values);
 						//Destroy object from table
@@ -127,7 +127,7 @@ if mouse_check_button_released(mb_left) {
 
 	#region place object in desk array 
 	//over desk ?
-	if item_holding[0] != -1 && scrInBounds(mouse_x_gui, mouse_y_gui, desk_gui_x, desk_gui_y, desk_gui_x + desk_gui_w, desk_gui_y + desk_gui_h) {
+	if item_holding[0] != -1 && scr_in_bounds(mouse_x_gui, mouse_y_gui, desk_gui_x, desk_gui_y, desk_gui_x + desk_gui_w, desk_gui_y + desk_gui_h) {
 		for(var i = 0; i < array_length(desk_array); i++) {
 			//free slot
 			if desk_array[i,0] == -1 {
@@ -145,7 +145,7 @@ if mouse_check_button_released(mb_left) {
 				for(var i2 = 0; i2 < array_length(desk_array) && i2 != i; i2++) {
 					var inst2 = desk_array[i2,0];
 					//On other item ?
-					if scrInBounds(inst.x, inst.y, inst2.bbox_left,inst2.bbox_top,inst2.bbox_right,inst.bbox_bottom) {
+					if scr_in_bounds(inst.x, inst.y, inst2.bbox_left,inst2.bbox_top,inst2.bbox_right,inst.bbox_bottom) {
 						//Can be combined ?
 						var combination = scr_items_combine(inst,inst2);
 						//TODO glitching out
