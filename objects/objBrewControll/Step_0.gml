@@ -41,10 +41,10 @@
 			cooking = true;
 			cooked_timer = cooking_time;
 			
-			selected_bottle = 0;
-		} else {
-			selected_bottle = 0;
 		}
+		
+		selected_bottle = 0;
+		
 	} 
 
 #endregion

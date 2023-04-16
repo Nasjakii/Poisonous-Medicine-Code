@@ -53,7 +53,7 @@ if instance_exists(objKiller) {
 			#endregion		
 		#endregion
 		
-		#region Draw the items in the circle
+				#region Draw the items in the circle
 					var spr = ds_list_find_value(selection_list, i);
 					var spr_w = sprite_get_width(spr);
 					var spr_h = sprite_get_height(spr);

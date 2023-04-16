@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sprTailor",
-  "bbox_bottom": 367,
-  "bbox_left": 0,
-  "bbox_right": 511,
+  "bbox_bottom": 319,
+  "bbox_left": 31,
+  "bbox_right": 649,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"072e8db1-1cca-4ae2-b380-c84f105f1ccf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67d2d77b-5d1b-4830-ab97-f888f4bb4233",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 368,
+  "height": 320,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"696aa724-928b-49ce-ba25-dd88cb286010","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ba1e4f9b-ae16-417e-8afe-25e444596ec2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"072e8db1-1cca-4ae2-b380-c84f105f1ccf","path":"sprites/sprTailor/sprTailor.yy",},},},"Disabled":false,"id":"e204f9ea-1e2e-4430-81dc-fdf3482e48e8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"67d2d77b-5d1b-4830-ab97-f888f4bb4233","path":"sprites/sprTailor/sprTailor.yy",},},},"Disabled":false,"id":"8566262c-ac38-4674-93c7-5766f748b03f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 512,
+  "width": 650,
 }

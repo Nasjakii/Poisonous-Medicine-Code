@@ -10,8 +10,6 @@
     {"name":"inst_21E9C71E","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_2979BC2F","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_667FE2D4","path":"rooms/Brewroom/Brewroom.yy",},
-    {"name":"inst_55BCAE9A","path":"rooms/Brewroom/Brewroom.yy",},
-    {"name":"inst_2E3F7248","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_6DCE7857","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_2C3F185B","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_62FE03A4","path":"rooms/Brewroom/Brewroom.yy",},
@@ -20,13 +18,15 @@
     {"name":"inst_44A406B8","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_36CEC2B7","path":"rooms/Brewroom/Brewroom.yy",},
     {"name":"inst_30A8C095","path":"rooms/Brewroom/Brewroom.yy",},
+    {"name":"inst_70E9108F","path":"rooms/Brewroom/Brewroom.yy",},
+    {"name":"inst_110882EB","path":"rooms/Brewroom/Brewroom.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Testtube","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36CEC2B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objTestTube","path":"objects/objTestTube/objTestTube.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":311.0,"y":68.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_55BCAE9A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonPharmacyBackroom","path":"objects/objButtonPharmacyBackroom/objButtonPharmacyBackroom.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":0.25925925,"x":448.0,"y":214.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E3F7248","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonPharmacyBackroom2","path":"objects/objButtonPharmacyBackroom2/objButtonPharmacyBackroom2.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":0.25925925,"x":0.0,"y":214.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36CEC2B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objTestTube","path":"objects/objTestTube/objTestTube.yy",},"properties":[],"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":311.0,"y":68.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_70E9108F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonLeaveRoom","path":"objects/objButtonLeaveRoom/objButtonLeaveRoom.yy",},"properties":[],"rotation":0.0,"scaleX":0.87499994,"scaleY":0.87499994,"x":424.0,"y":214.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_110882EB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonCraftingRoom","path":"objects/objButtonCraftingRoom/objButtonCraftingRoom.yy",},"properties":[],"rotation":0.0,"scaleX":0.8749999,"scaleY":0.8749999,"x":0.0,"y":214.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":1,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2979BC2F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBrewControll","path":"objects/objBrewControll/objBrewControll.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},

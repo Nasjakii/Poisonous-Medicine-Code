@@ -1,0 +1,51 @@
+{
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tlGroundTailor",
+  "autoTileSets": [],
+  "macroPageTiles": {
+    "SerialiseHeight": 2,
+    "SerialiseWidth": 3,
+    "TileSerialiseData": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+    ],
+  },
+  "out_columns": 2,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Tailor",
+    "path": "folders/Tile Sets/Tailor.yy",
+  },
+  "spriteId": {
+    "name": "sprGroundTailor",
+    "path": "sprites/sprGroundTailor/sprGroundTailor.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 3,
+  "tileAnimation": {
+    "FrameData": [
+      0,
+      1,
+      2,
+    ],
+    "SerialiseFrameCount": 1,
+  },
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 64,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 64,
+  "tilexoff": 0,
+  "tileyoff": 0,
+}

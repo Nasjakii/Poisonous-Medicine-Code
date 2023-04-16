@@ -1,34 +1,23 @@
 
-taunt_level = taunt_hear + taunt_see + taunt_smell;
 
-if taunt_level >= taunt_cap[0] {
-	
-	if taunt_level < taunt_cap[2] {
-		var highest_taunt = max(taunt_hear, taunt_see, taunt_smell);
-		
-		if highest_taunt = taunt_hear {
-			//look direction direct
-		} 
-		if highest_taunt = taunt_see {
-			//look direction direct
-		} 
-		if highest_taunt = taunt_smell {
-			//look around but not direct (not so far)
-		}
-	} else if taunt_level < taunt_cap[3] {
-		var highest_taunt = max(taunt_hear, taunt_see, taunt_smell);
-		
-		if highest_taunt = taunt_hear {
-			//move direction
-		} 
-		if highest_taunt = taunt_see {
-			//move direction 
-		} 
-		if highest_taunt = taunt_smell {
-			//look around far
-		}
-	} else if taunt_level >= taunt_cap[3] {
-		//move directly to target, if close enough they see you no matter what (fast)
-	}
-	
+state();
+
+
+if keyboard_check_released(ord("1")) {
+	state = state_idle;
 }
+if keyboard_check_released(ord("2")) {
+	state = state_patrol;
+}
+if keyboard_check_released(ord("3")) {
+	state = state_follow;
+}
+
+
+
+if distance_to_object(objKiller) < vision_range {
+	if state != state_follow state = state_follow;
+} else {
+	state = state_patrol;
+}
+

@@ -9,13 +9,13 @@
   "instanceCreationOrder": [
     {"name":"inst_B1819FF","path":"rooms/Craftingroom/Craftingroom.yy",},
     {"name":"inst_138B8A7C","path":"rooms/Craftingroom/Craftingroom.yy",},
-    {"name":"inst_451F649C","path":"rooms/Craftingroom/Craftingroom.yy",},
+    {"name":"inst_208E8CCF","path":"rooms/Craftingroom/Craftingroom.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_138B8A7C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonPharmacyBackroom","path":"objects/objButtonPharmacyBackroom/objButtonPharmacyBackroom.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":0.0,"y":0.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_451F649C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonPharmacyBackroom2","path":"objects/objButtonPharmacyBackroom2/objButtonPharmacyBackroom2.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":360.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_138B8A7C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonLeaveRoom","path":"objects/objButtonLeaveRoom/objButtonLeaveRoom.yy",},"properties":[],"rotation":0.0,"scaleX":0.7187498,"scaleY":0.7187498,"x":0.0,"y":170.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_208E8CCF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objButtonPotionRoom","path":"objects/objButtonPotionRoom/objButtonPotionRoom.yy",},"properties":[],"rotation":0.0,"scaleX":0.7187498,"scaleY":0.7187498,"x":346.0,"y":170.0006,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_B1819FF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objTable","path":"objects/objTable/objTable.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":21.0,"y":20.0,},

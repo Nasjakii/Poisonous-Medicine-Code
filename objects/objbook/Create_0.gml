@@ -157,9 +157,12 @@ global.show_book = false;
 	
 	#region Quest Chapter
 	
-
+	
+	
 	quest_page = 0;
 	active_quests = scr_quest_get_all_active();
+	
+	scr_quest_set_state("Collect test", 0);
 	
 	#endregion
 

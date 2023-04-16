@@ -6,3 +6,5 @@ if draw_fluid {
 } else {
 	image_index = 0;
 }
+
+

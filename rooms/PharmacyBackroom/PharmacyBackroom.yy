@@ -9,13 +9,13 @@
   "instanceCreationOrder": [
     {"name":"inst_6178D37B_2","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_CF98C55","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
-    {"name":"inst_525ED538","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_E55100C","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_7FAF9695","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_4F1FF7FD","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_674A5086","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_1E32D000","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_8F680ED","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
+    {"name":"inst_525ED538","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_A45CC78","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
     {"name":"inst_3042ACD9","path":"rooms/PharmacyBackroom/PharmacyBackroom.yy",},
   ],
@@ -23,7 +23,10 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"General","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1E32D000","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objGuiController","path":"objects/objGuiController/objGuiController.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_525ED538","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":672.0,"scaleY":32.0,"x":0.0,"y":352.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_A45CC78","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":32.0,"scaleY":320.0,"x":-32.0,"y":64.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3042ACD9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":32.0,"scaleY":320.0,"x":672.0,"y":64.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6178D37B_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objKiller","path":"objects/objKiller/objKiller.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":224.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
@@ -32,15 +35,23 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_CF98C55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objDoorPharmacyBackdoor","path":"objects/objDoorPharmacyBackdoor/objDoorPharmacyBackdoor.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":32.0,"y":224.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_525ED538","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":672.0,"scaleY":32.0,"x":0.0,"y":352.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E55100C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objCraftingtableClick","path":"objects/objCraftingtableClick/objCraftingtableClick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7FAF9695","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBrewingstand","path":"objects/objBrewingstand/objBrewingstand.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":212.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4F1FF7FD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objPaintingFamily","path":"objects/objPaintingFamily/objPaintingFamily.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":224.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_8F680ED","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objChest","path":"objects/objChest/objChest.yy",},"properties":[],"rotation":0.0,"scaleX":0.75,"scaleY":0.75,"x":370.0,"y":304.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_A45CC78","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":32.0,"scaleY":320.0,"x":-32.0,"y":64.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3042ACD9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockade","path":"objects/objBlockade/objBlockade.yy",},"properties":[],"rotation":0.0,"scaleX":32.0,"scaleY":320.0,"x":672.0,"y":64.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Ground","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":7,"SerialiseWidth":11,"TileCompressedData":[
+-11,-2147483648,-11,0,-33,-2147483648,11,1,2,1,2,
+1,2,1,2,1,2,1,-11,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tlPharmacyBackroomGround","path":"tilesets/tlPharmacyBackroomGround/tlPharmacyBackroomGround.yy",},"userdefinedDepth":false,"visible":true,"x":-16,"y":32,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Wall","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":7,"SerialiseWidth":11,"TileCompressedData":[
+66,1,4,4,5,1,4,5,2,1,4,
+5,4,4,5,4,5,5,4,5,4,4,
+5,5,2,1,4,5,2,1,4,5,2,
+1,4,5,4,5,4,5,4,5,4,5,
+4,1,2,1,4,5,2,1,4,5,2,
+1,4,5,4,5,4,5,4,5,4,5,
+4,-11,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tlPharmacyBackroomWall","path":"tilesets/tlPharmacyBackroomWall/tlPharmacyBackroomWall.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Pharmacy",

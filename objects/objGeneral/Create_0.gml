@@ -3,6 +3,9 @@
 	draw_debug = false;
 	debug_list = ds_list_create();
 	
+	chat = false;
+	chat_width = 300;
+	
 
 #endregion
 
