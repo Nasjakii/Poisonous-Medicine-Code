@@ -1,5 +1,5 @@
 
 
-red = 255;
-green = 255;
+red = 100;
+green = 100;
 blue = 255;

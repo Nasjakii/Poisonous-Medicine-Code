@@ -2,54 +2,59 @@
 
 var obj = objBrewControll;
 
-#region draw fluid
-	if obj.fillheight > 0 {
-	
-		var fillheight = obj.fillheight * 3 - 3;
-	
-		//prepare surface
-		if (!surface_exists(surface)) {
-			surface = surface_create((bbox_right + 50) - (bbox_left - 50), fillheight);
-		}
-		surface_set_target(surface);
-	
-		//draw Test tube fluid
-		if obj.fillheight < obj.fillheight_max || !(obj.cooked_timer == obj.cooking_time) {
-			draw_sprite_ext(sprTestTubeFluid, 1, 67, -(obj.fillheight_max-fillheight) - 43,1,1,0, obj.mix_color, 1);
-		}
-	
-		//draw the fluid
-		gpu_set_colorwriteenable(1,1,1,0);
-		draw_rectangle_color(bbox_left - 50,bbox_bottom,
-							 bbox_right + 50, bbox_bottom - fillheight,
-							 obj.mix_color,obj.mix_color,obj.mix_color,obj.mix_color, false);
 
-		gpu_set_colorwriteenable(1,1,1,1);
-	
-		//finish surface
-		surface_reset_target();
-		draw_surface(surface, bbox_left - 50, bbox_bottom - fillheight); //draws from bottom left to top right
-		surface_free(surface);
-	
-	}
-#endregion
-
-
+if scr_in_bounds(mouse_x, mouse_y, bbox_left - 10, bbox_top, bbox_right + 10, bbox_bottom) && mouse_check_button_pressed(mb_left) {
+	grabbed = true;
+} 
+if mouse_check_button_released(mb_left) {
+	grabbed = false;
+}
 
 #region draw testtube
 	
 
+	#region Slider
+	if grabbed {
+		var spr = sprSlider;
+		var spr_width = sprite_get_width(spr);
+		var spr_height = sprite_get_height(spr);
+		var spr_yoffset = 5;
+		
+
+			var xpos = clamp(mouse_x, x - spr_width / 2, x + spr_width / 2);
+			
+			var bar_width = 2;
+			var rot = clamp(point_direction(x,y,mouse_x,mouse_y) - 90, -70, 70);
+			
+			//draw bar
+			draw_set_color(c_red);
+			draw_rectangle(xpos, bbox_top - spr_yoffset, xpos - bar_width, bbox_top - spr_yoffset - spr_height, false);
+			draw_set_color(c_white);
+			
+			if rot >= 70 { //empty bottle without needing to fill it completly
+				//reset
+				show_debug_message("leeren")
+			}
+			
+			//draw slider
+			draw_sprite(spr, 1, x, bbox_top - spr_yoffset);
+		
+	} else {
+		rot = 0;
+	}
+
+		
+		
+
+	
+	#endregion
+	
+	
+	
+
 	if obj.fillheight == obj.fillheight_max && obj.cooked_timer == obj.cooking_time {
 		
-	
-		var rot = clamp(point_direction(x,y,mouse_x,mouse_y) - 90, -70, 70);
-		draw_sprite_ext(sprTestTubeFluid, 1, x,y,1,1,rot, obj.mix_color, 1);
-		draw_sprite_ext(sprite_index, 1, x,y, 1,1,rot,c_white,1);
-		
-		if rot >= 70 {
-			//reset
-			show_debug_message("leeren")
-		} else if rot <= -70 {
+		 if rot <= -70 {
 		
 			if objBrewControll.cooked_timer <= objBrewControll.cooking_time {
 				show_debug_message("umgefüllt")
@@ -65,14 +70,45 @@ var obj = objBrewControll;
 		}
 	
 	
-	} else {
-		draw_self();
-	}
+	} 
 	
 	
 
 #endregion
 
+#region draw fluid
+	if obj.fillheight > 0 {
+	
+		var fillheight = obj.fillheight * 3 - 3;
+	
+		//prepare surface
+		if (!surface_exists(surface)) {
+			surface = surface_create((bbox_right + 50) - (bbox_left - 50), fillheight);
+		}
+		surface_set_target(surface);
+	
+		//draw Test tube fluid
+		if obj.fillheight < obj.fillheight_max || !(obj.cooked_timer == obj.cooking_time) {
+			draw_sprite_ext(sprTestTubeFluid, 1, 67, -(obj.fillheight_max-fillheight) - 43,1,1,rot, obj.mix_color, 1);
+		}
+	
+		//draw overlap
+		gpu_set_colorwriteenable(1,1,1,0); //(alpha will not be changed only color)
+		draw_rectangle_color(bbox_left - 50,bbox_bottom,
+							 bbox_right + 50, bbox_bottom - fillheight,
+							 obj.mix_color,obj.mix_color,obj.mix_color,obj.mix_color, false);
+		
+		gpu_set_colorwriteenable(1,1,1,1);
+	
+		//finish surface
+		surface_reset_target();
+		draw_surface(surface, bbox_left - 50, bbox_bottom - fillheight); //draws from bottom left to top right
+		surface_free(surface);
+	
+	}
+#endregion
+
+draw_sprite_ext(sprite_index, 1, x,y, 1,1,rot,c_white,1);
 
 var br = bbox_right;
 var bl = bbox_left;

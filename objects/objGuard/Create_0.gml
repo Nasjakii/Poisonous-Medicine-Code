@@ -3,16 +3,16 @@ scr_create_subject("Guard");
 
 #region stats
 
-	patrol_speed = 10;
+	patrol_speed = 2;
 	return_speed = 3;
 	chase_speed = 5;
 	
-	vision_range = 100;
-	capture_range = 100;
+	vision_range = 300;
+	capture_range = 60;
 #endregion
 
 #region vars
-	capture_time = 2 * room_speed;
+	capture_time = 3 * room_speed;
 	capture_timer = capture_time;
 
 #endregion
@@ -25,7 +25,6 @@ scr_create_subject("Guard");
 	
 	state_idle = function() {
 		state_display = "Idle";
-		state = state_idle;
 		
 		
 	}
@@ -33,78 +32,68 @@ scr_create_subject("Guard");
 	
 	#region state patrol
 	creation_x = x;
-	creation_y = y;
-	
-	path_patrol = path_add();
-	path_add_point(path_patrol, creation_x,creation_y, patrol_speed);
-	path_add_point(path_patrol, x - 50, y, patrol_speed);
-	path_add_point(path_patrol, x + 50, y, patrol_speed);
-	
+	x_speed = patrol_speed;
+	patrol_width = 200;
 	
 	state_patrol = function() {
 		state_display = "Patrol";
-		state = state_patrol;
 		
-		if path_index != path_patrol {
-			if distance_to_point(creation_x, creation_y) < 5 {
-				path_start(path_patrol, patrol_speed, path_action_reverse, false);
-			} else state = state_return;
+		x += x_speed;
+		
+		if x < creation_x - patrol_width / 2 {
+			x_speed = patrol_speed;
 		}
+		if x > creation_x + patrol_width / 2 {
+			x_speed = -patrol_speed;
+		}
+
 			
 	}
 	#endregion
 	
-	#region state return
-	
-		state_return = function() {
-			state_display = "Return";
-			
-			mp_potential_step(creation_x, creation_y, return_speed, false);
-			
-			if distance_to_point(creation_x, creation_y) < 5 {
-				state = state_patrol;
-			}
 
-		}
-	#endregion
-	
 	#region state follow
 		target = objKiller;
 		state_follow = function() {
 			state_display = "Follow";
 			
-			path_end();
-			if target.x > x x+= chase_speed;
-			if target.x < x x-= chase_speed;
-			
-			if distance_to_object(target) <= capture_range {
-				if capture_timer > 0 { 
-					capture_timer--;
-					debug capture_timer));
-				} else {
-					state = state_capture;
-				}
+			if target.x > x {
+				x += chase_speed;
 			} else {
-				capture_timer = capture_time;
+				x -= chase_speed;
 			}
+			
 		}
 	#endregion
 	
 	#region state sleep
-	
+		sleep_time = 10 * room_speed;
+		sleep_timer = sleep_time;
 		state_sleep = function() {
 			state_display = "Sleep";
+			sleep_timer--;
+			if sleep_timer == 0 {
+				state = state_idle;
+			}
 			
 		}
 	#endregion
 	
 	#region state capture
+		capturing = false;
 		state_capture = function() {
 			state_display = "Capture";
-			
-			check;
-			
-			objKiller.can_move = false;
+			if capturing = false {
+				capturing = true;
+				capture_timer = capture_time; // reset
+			}
+
+			if capture_timer <= 0 {
+				objKiller.captured = true;
+				capture_timer = capture_time;
+			} else {
+				capture_timer--;
+			}
 		}
 	#endregion
 	

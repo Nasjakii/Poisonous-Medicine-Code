@@ -12,6 +12,7 @@ speed_walking = 4;
 
 speedH = speed_walking;
 
+captured = false;
 
 sin_x = 0;
 
@@ -212,6 +213,15 @@ sin_x = 0;
 				state = state_idle;
 				can_move = true;
 			}
+		}
+	#endregion
+	
+	#region state captured
+		state_captured = function() {
+			scr_debug_info("State", "Captured");
+			can_move = false;
+			
+			
 		}
 	#endregion
 	

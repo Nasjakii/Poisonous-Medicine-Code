@@ -8,7 +8,8 @@ for(var i = 0; i < array_length(ds_bottles); i++) {
 
 
 if selected_bottle != 0 {
-	draw_sprite(object_get_sprite(ds_bottles[selected_bottle]), 1,mouse_x, mouse_y);
+	var spr = object_get_sprite(ds_bottles[selected_bottle]);
+	draw_sprite(spr, 1,mouse_x - sprite_get_width(spr) / 2, mouse_y - sprite_get_height(spr) / 2);
 }
 
 

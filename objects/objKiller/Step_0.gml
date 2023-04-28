@@ -48,7 +48,9 @@ if position_meeting(x,bbox_bottom,objLedder2) && keyboard_check(ord("S")) {
 	
 
 
-
+if captured {
+	state = state_captured;
+}
 
 
 
