@@ -1,6 +1,7 @@
 
 
 if add_note {
+
 	//Open the notes 
 	var spr = sprObservationNotes;
 	var width = sprite_get_width(spr);
@@ -14,7 +15,10 @@ if add_note {
 
 	
 	//type notes
-	var typed_string = keyboard_string;
+	if string_length(typed_string) <= note_max_length {
+		typed_string += keyboard_string;
+	}
+	
 	draw_set_font(foCustom);
 	draw_set_valign(fa_top);
 	draw_set_color(c_black);
@@ -24,3 +28,4 @@ if add_note {
 	scr_reset_text();
 	
 }
+keyboard_string = "";

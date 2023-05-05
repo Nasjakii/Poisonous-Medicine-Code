@@ -99,6 +99,20 @@ if scr_in_bounds(mouse_x_gui, mouse_y_gui, 0,0,sprite_get_width(sprBookIcon), sp
 	global.show_book = !global.show_book;
 }
 
+#region show Message 
+	
+
+	if show_gui_message {
+		gui_message_timer += 0.04;
+		scr_show_message_gui(gui_message_timer);
+		if gui_message_timer > 2 * pi {
+			show_gui_message = false;
+		}
+	} else {
+		gui_message_timer = 0;
+	}
+	
+#endregion
 
 
 

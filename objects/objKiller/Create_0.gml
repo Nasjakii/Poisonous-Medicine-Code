@@ -200,6 +200,9 @@ sin_x = 0;
 	#endregion
 	
 	#region state talking
+		dialog_index = 0;
+		name = "Jacob";
+	
 		dialog = 0;
 		dialog_active = false;
 		text_arr = scr_get_dialog("Jacob");

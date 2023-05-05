@@ -117,6 +117,7 @@
     {"name":"Pharmacy","order":6,"path":"folders/Tile Sets/Pharmacy.yy",},
     {"name":"Tailor","order":5,"path":"folders/Tile Sets/Tailor.yy",},
     {"name":"Timelines","order":6,"path":"folders/Timelines.yy",},
+    {"name":"GUI","order":6,"path":"folders/Scripts/Short/Draw/GUI.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"scr_weapon_effects","order":1,"path":"scripts/scr_weapon_effects/scr_weapon_effects.yy",},
@@ -303,6 +304,7 @@
     {"name":"scr_draw_dialog","order":3,"path":"scripts/scr_draw_dialog/scr_draw_dialog.yy",},
     {"name":"scr_debug_array","order":1,"path":"scripts/scr_debug_array/scr_debug_array.yy",},
     {"name":"scr_camera_set","order":9,"path":"scripts/scr_camera_set/scr_camera_set.yy",},
+    {"name":"foGUIMessage","order":9,"path":"fonts/foGUIMessage/foGUIMessage.yy",},
     {"name":"objHouse4","order":3,"path":"objects/objHouse4/objHouse4.yy",},
     {"name":"objDoorPharmacyBackdoor","order":8,"path":"objects/objDoorPharmacyBackdoor/objDoorPharmacyBackdoor.yy",},
     {"name":"objWatch","order":6,"path":"objects/objWatch/objWatch.yy",},
@@ -360,6 +362,7 @@
     {"name":"sprBlueMonkshood","order":6,"path":"sprites/sprBlueMonkshood/sprBlueMonkshood.yy",},
     {"name":"foInteract","order":1,"path":"fonts/foInteract/foInteract.yy",},
     {"name":"path_npc_pharmacy_exit","order":4,"path":"paths/path_npc_pharmacy_exit/path_npc_pharmacy_exit.yy",},
+    {"name":"scr_start_message_gui","order":1,"path":"scripts/scr_start_message_gui/scr_start_message_gui.yy",},
     {"name":"scr_create_victim","order":1,"path":"scripts/scr_create_victim/scr_create_victim.yy",},
     {"name":"sprBackgroundMountains","order":1,"path":"sprites/sprBackgroundMountains/sprBackgroundMountains.yy",},
     {"name":"objStaircase","order":3,"path":"objects/objStaircase/objStaircase.yy",},

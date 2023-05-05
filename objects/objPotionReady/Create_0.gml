@@ -6,4 +6,7 @@ mix_color = make_color_rgb(255,255,255);
 
 typed_string = "";
 
+note_max_length = 50;
 add_note = false;
+
+

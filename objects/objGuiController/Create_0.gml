@@ -26,6 +26,16 @@
 #endregion
 
 
+#region GUI Message
+
+	gui_message_timer = 0;
+	show_gui_message = false;
+	gui_message = "";
+	
+	
+	
+#endregion
+
 
 //Book Menu Icon 
 sprBookIcon_subimg = 0;

@@ -22,7 +22,7 @@ function scr_spawn_player(){
 			break;
 		}
 		
-		y = o.killer_spawn_object.bbox_top;
+		y = o.killer_spawn_object.bbox_bottom - objKiller.sprite_height;
 		
 
 	} else {
