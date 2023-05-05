@@ -141,6 +141,8 @@ global.show_book = false;
 
 #region pages
 
+	quest_page = 0;
+
 	#region Inventory Chapter
 	
 	var itembox_gap = 20;
@@ -158,11 +160,7 @@ global.show_book = false;
 	#region Quest Chapter
 	
 	
-	
-	quest_page = 0;
-	active_quests = scr_quest_get_all_active();
-	
-	scr_quest_set_state("Collect test", 0);
+
 	
 	#endregion
 

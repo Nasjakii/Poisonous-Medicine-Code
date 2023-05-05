@@ -20,7 +20,6 @@ if mouse_check_button_released(mb_left) {
 		var spr_height = sprite_get_height(spr);
 		var spr_yoffset = 5;
 		
-
 			var xpos = clamp(mouse_x, x - spr_width / 2, x + spr_width / 2);
 			
 			var bar_width = 2;
@@ -33,7 +32,8 @@ if mouse_check_button_released(mb_left) {
 			
 			if rot >= 70 { //empty bottle without needing to fill it completly
 				//reset
-				show_debug_message("leeren")
+
+				scr_reset_fluid();
 			}
 			
 			//draw slider
@@ -57,15 +57,11 @@ if mouse_check_button_released(mb_left) {
 		 if rot <= -70 {
 		
 			if objBrewControll.cooked_timer <= objBrewControll.cooking_time {
-				show_debug_message("umgefüllt")
-						
+
 				objPotionReady.draw_fluid = true;
 				objPotionReady.mix_color = objBrewControll.mix_color;
+				scr_reset_fluid();
 				
-				objBrewControll.fillheight = 0;
-				objBrewControll.mix_color = 0;
-				
-				ds_list_clear(ingredient_list);
 			}
 		}
 	
@@ -83,26 +79,26 @@ if mouse_check_button_released(mb_left) {
 	
 		//prepare surface
 		if (!surface_exists(surface)) {
-			surface = surface_create((bbox_right + 50) - (bbox_left - 50), fillheight);
+			surface = surface_create(bbox_right - bbox_left + surf_width, fillheight);
 		}
 		surface_set_target(surface);
 	
 		//draw Test tube fluid
-		if obj.fillheight < obj.fillheight_max || !(obj.cooked_timer == obj.cooking_time) {
-			draw_sprite_ext(sprTestTubeFluid, 1, 67, -(obj.fillheight_max-fillheight) - 43,1,1,rot, obj.mix_color, 1);
-		}
+
+		draw_sprite_ext(sprTestTubeFluid, 1, surf_width / 2 + 17, -(obj.fillheight_max-fillheight) - 43,1,1,rot, obj.mix_color, 1);
+
 	
 		//draw overlap
 		gpu_set_colorwriteenable(1,1,1,0); //(alpha will not be changed only color)
-		draw_rectangle_color(bbox_left - 50,bbox_bottom,
-							 bbox_right + 50, bbox_bottom - fillheight,
+		draw_rectangle_color(bbox_left - 70,bbox_bottom,
+							 bbox_right + 70, bbox_bottom - fillheight,
 							 obj.mix_color,obj.mix_color,obj.mix_color,obj.mix_color, false);
 		
 		gpu_set_colorwriteenable(1,1,1,1);
 	
 		//finish surface
 		surface_reset_target();
-		draw_surface(surface, bbox_left - 50, bbox_bottom - fillheight); //draws from bottom left to top right
+		draw_surface(surface, bbox_left - surf_width / 2, bbox_bottom - fillheight); //draws from bottom left to top right
 		surface_free(surface);
 	
 	}

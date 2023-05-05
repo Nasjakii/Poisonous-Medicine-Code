@@ -1,22 +1,26 @@
 
 
-if draw_notes {
+if add_note {
 	//Open the notes 
 	var spr = sprObservationNotes;
 	var width = sprite_get_width(spr);
-	var xpos = (gui_width - width) / 2
-	var ypos = 0;
+	var xpos = bbox_left * gui_width / room_width;
+	var ypos = bbox_top * gui_height / room_height;
+	var text_yoffset = 32;
+	var text_xoffset = 16;
+	
 	
 	draw_sprite(spr, 1, xpos, ypos);
-	
-	for(var i = 0; i < ds_list_size(objTestTube.ingredient_list); i++) {
-		var str = ds_list_find_value(objTestTube.ingredient_list, i);
-		draw_text(xpos, ypos, str);
-		debug str));
-	}
+
 	
 	//type notes
-	typed_string = keyboard_string;
+	var typed_string = keyboard_string;
+	draw_set_font(foCustom);
+	draw_set_valign(fa_top);
+	draw_set_color(c_black);
+	var text_sep = string_height(typed_string);
 	
-	draw_text(xpos, ypos, typed_string);
+	draw_text_ext(xpos + text_xoffset, ypos + text_yoffset, typed_string, text_sep, width - text_xoffset);
+	scr_reset_text();
+	
 }

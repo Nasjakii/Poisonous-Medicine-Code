@@ -1,9 +1,9 @@
+//only called by player object
 function scr_spawn_player(){
 	
 	var o = objGeneral;
 	
 	if o.killer_spawn_object != noone {
-		
 		
 		switch(o.killer_spawn_pos) {
 			case("left"):

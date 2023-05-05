@@ -38,7 +38,7 @@ function scr_draw_dialog(d_index = dialog_index){
 				text = text_arr[d_index];
 			} else {
 				dialog_type = "End"; //TODO Enddialog	
-				text[0] = "";
+				text[0] = "Do you need anything?";
 			}
 			
 		}

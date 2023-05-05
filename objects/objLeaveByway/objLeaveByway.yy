@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprLeaveByway",
-    "path": "sprites/sprLeaveByway/sprLeaveByway.yy",
+    "name": "sprAccessByway",
+    "path": "sprites/sprAccessByway/sprAccessByway.yy",
   },
   "spriteMaskId": null,
   "visible": true,

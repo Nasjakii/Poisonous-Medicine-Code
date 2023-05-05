@@ -132,7 +132,10 @@
 			//Writing
 			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "F";
-			dialog_content_arr[0,1] = "P1 E";
+			dialog_content_arr[0,1] = "Hello Jacob.";
+			
+			dialog_content_arr[1,0] = "E";
+			dialog_content_arr[1,0] = "Kümmer dich bitte um die Kunden.";
 
 			ds_map_add_map(character_map[0], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
 
@@ -142,7 +145,10 @@
 			//Writing
 			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "F";
-			dialog_content_arr[0,1] = "P1 G";
+			dialog_content_arr[0,1] = "Hallo Jacob.";
+			
+			dialog_content_arr[1,0] = "E";
+			dialog_content_arr[1,0] = "Please help the customer at the counter.";
 	
 			//Adding
 			ds_map_add_map(character_map[1], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
@@ -158,13 +164,13 @@
 			//Writing
 			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "";
-			dialog_content_arr[0,1] = "W1 E";
+			dialog_content_arr[0,1] = "Good day Mister Ignoble! May I get something to help me sleep better? I've been having so much trouble to fall asleep lately.";
 			
 			dialog_content_arr[1,0] = "";
-			dialog_content_arr[1,1] = "W2 E";
+			dialog_content_arr[1,1] = "Just something to help me sleep.";
 			
 			dialog_content_arr[2,0] = "";
-			dialog_content_arr[2,1] = "W3 E";
+			dialog_content_arr[2,1] = "Thank you so much in advance!";
 
 			ds_map_add_map(character_map[0], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
 
@@ -174,13 +180,13 @@
 			//Writing
 			var dialog_content_arr = [];
 			dialog_content_arr[0,0] = "";
-			dialog_content_arr[0,1] = "W1 G";
+			dialog_content_arr[0,1] = "Good day Mister Ignoble! May I get something to help me sleep better? I've been having so much trouble to fall asleep lately.";
 			
 			dialog_content_arr[1,0] = "";
-			dialog_content_arr[1,1] = "W2 G";
+			dialog_content_arr[1,1] = "Just something to help me sleep.";
 			
 			dialog_content_arr[2,0] = "";
-			dialog_content_arr[2,1] = "W3 G";
+			dialog_content_arr[2,1] = "Thank you so much in advance!";
 	
 			//Adding
 			ds_map_add_map(character_map[1], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));

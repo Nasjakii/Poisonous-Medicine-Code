@@ -38,7 +38,11 @@ scr_create_subject("Guard");
 	state_patrol = function() {
 		state_display = "Patrol";
 		
-		x += x_speed;
+		if !position_meeting(x + sign(x_speed) * sprite_width / 2 + x_speed, y, objBlockade) {
+			x += x_speed;
+		} else {
+			x_speed *= -1; // turn around
+		}
 		
 		if x < creation_x - patrol_width / 2 {
 			x_speed = patrol_speed;
@@ -56,6 +60,11 @@ scr_create_subject("Guard");
 		target = objKiller;
 		state_follow = function() {
 			state_display = "Follow";
+			
+			if target == noone {
+				state = state_patrol;
+				return;
+			}
 			
 			if target.x > x {
 				x += chase_speed;

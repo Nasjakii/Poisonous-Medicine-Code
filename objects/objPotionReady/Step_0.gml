@@ -2,7 +2,7 @@
 
 if scr_in_bounds_object(mouse_x, mouse_y, id) && l_click {
 
-	draw_notes = !draw_notes;
+	add_note = !add_note;
 	
 
 	scr_add_item(sprPotion1, objPotion1, false, true, 1, 0);

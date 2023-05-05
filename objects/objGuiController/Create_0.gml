@@ -27,7 +27,7 @@
 
 
 
-//Book Menu
+//Book Menu Icon 
 sprBookIcon_subimg = 0;
 
 global.show_book = false;

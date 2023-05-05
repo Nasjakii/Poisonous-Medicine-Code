@@ -13,7 +13,10 @@ var collect_list = ds_list_create();
 	scr_quest_map_create(quest_name);
 	scr_quest_map_add_key(quest_name, "Type", "Collect");
 	scr_quest_map_add_key(quest_name, "Task", "Enter your pharmacy to complete this mission.");
-	scr_quest_map_add_key(quest_name, "Objects", objKey);
+	
+	ds_list_clear(collect_list);
+	ds_list_add(collect_list, objPoppy);
+	scr_quest_map_add_key(quest_name, "Objects", collect_list);
 #endregion
 
 #region Paperboy quest
@@ -29,6 +32,7 @@ var collect_list = ds_list_create();
 	scr_quest_map_add_key(quest_name, "Type", "Collect");
 	scr_quest_map_add_key(quest_name, "Task", "Go to the store and buy some thing.");
 
+	ds_list_clear(collect_list);
 	ds_list_add(collect_list, objPoppy);
 	scr_quest_map_add_key(quest_name, "Objects", collect_list);
 #endregion
@@ -55,7 +59,7 @@ var collect_list = ds_list_create();
 	scr_quest_map_add_key(quest_name, "Task", "Make the Potion for Humphrey against his headache");
 
 	ds_list_clear(collect_list);
-	//ds_list_add(collect_list, objPoppy);
+	ds_list_add(collect_list, objPoppy);
 	
 	scr_quest_map_add_key(quest_name, "Objects", collect_list);
 #endregion
@@ -69,17 +73,17 @@ var collect_list = ds_list_create();
 	ds_list_clear(collect_list);
 	ds_list_add(collect_list, objPoppy, objPerson, objKey);
 	scr_quest_map_add_key(quest_name, "Objects", collect_list);
+
 #endregion
 
 
 //Main Hint -> custom bookpage part
 
 
-
 scr_quest_save();
 
 
-//Suply for others
+//Supply for others
 active_quests = ds_list_create();
 active_quests = scr_quest_get_all_active();
 

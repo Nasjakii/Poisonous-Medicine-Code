@@ -1,4 +1,7 @@
 function scr_visible(obj_looking, obj_target, obj_blocking){
+	
+	if obj_blocking == noone return false;
+	
 	//makes sure vision from obj a to obj b is not blocked by obj c
 	var _visible = true;
 	

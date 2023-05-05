@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprDoorSide",
-    "path": "sprites/sprDoorSide/sprDoorSide.yy",
+    "name": "sprDoorClocktower",
+    "path": "sprites/sprDoorClocktower/sprDoorClocktower.yy",
   },
   "spriteMaskId": null,
   "visible": true,

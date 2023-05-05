@@ -15,7 +15,7 @@ function scr_create_subject(objName, profile_sprite = sprNothing){
 	
 	
 	
-	//load
+	//load dialog
 	dialog_index = scr_load("Real", objName, "dialog_index", 0);
 	
 	var first_special_interact = scr_dialog_get_next_sequence(dialog_index, special_arr); //Default val if not talked to

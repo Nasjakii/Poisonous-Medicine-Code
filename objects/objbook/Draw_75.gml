@@ -15,8 +15,8 @@ if global.show_book == true {
 	#endregion
 
 	#region Hitboxes of banners
-	var i;
-	for(i = 0; i < array_length(book_tab_hitbox); i++) {
+
+	for(var i = 0; i < array_length(book_tab_hitbox); i++) {
 		
 		book_tab_hitbox[i] = point_in_rectangle(mouse_x_gui, mouse_y_gui, banner_x[i], banner_y[i], banner_x[i] + banner_width, banner_y[i] + banner_height);
 		//draw the hitboxes
@@ -32,20 +32,24 @@ if global.show_book == true {
 			book_subimage = i;
 		
 			#region swap hitboxes
-			//All from 0 to i come left
-			for(var i2 = 0; i2 < i; i2++) {
+			//All from 0 to i get left
+			for(var i2 = 0; i2 <= i; i2++) {
 				banner_x[i2] = banner_left_x;
 			}
 			
 			//All others get right
-			for(var i2 = i; i2 < array_length(book_tab_hitbox); i2++) {
+			for(var i2 = i + 1; i2 < array_length(book_tab_hitbox); i2++) {
 				banner_x[i2] = banner_right_x;
 			}
 				
-				
-			#endregion
-		}
+		}		
+		
+		//draw exclamation mark if new quest is there, at banner
+		if objGuiController.sprBookIcon_subimg != 0 draw_sprite(sprExclamationMark,1,banner_x[3] + banner_width,banner_y[3]);
+		
 	}
+	
+	#endregion
 
 	#endregion
 
@@ -61,6 +65,10 @@ if global.show_book == true {
 				draw_text(page_left_x + 200, page_up_y + 150, "Ingredient1");
 				draw_text(page_left_x + 200, page_up_y + 200, "Ingredient2");
 				draw_text(page_left_x + 200, page_up_y + 250, "Ingredient3");
+				
+				scr_draw_text_box(page_right_x - 200, page_up_y + 200, "your_note", 10, foText);
+				
+				
 			
 			break;
 			case(2): //Tools
@@ -123,6 +131,8 @@ if global.show_book == true {
 			case(3):
 			
 				#region Quests
+					
+				
 					//you are up to date with the quests
 					objGuiController.sprBookIcon_subimg = 0;
 					

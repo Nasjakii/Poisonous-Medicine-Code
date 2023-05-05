@@ -1,6 +1,6 @@
 
 if interact == true {
 	
-	scr_door_rooms(ClockworkByway, "left", ClockworkTower, "right");
+	scr_door_rooms(ClockworkByway, "middle", ClockworkTower, "middle");
 	
 }

@@ -6,4 +6,6 @@ ingredient_list = ds_list_create();
 
 grabbed = false;
 
+
 surface = -1;
+surf_width = 250;

@@ -48,28 +48,28 @@ function scr_draw_quest_page(quest_map_name, side){
 	var lower_y = y_margin + title_height + description_height + paragraph_gap * 2;
 	
 	for(var i = 0 ; i < array_length(quest_data_keys); i++) {
-			
 		switch(type) {
 			case("Collect"):
 				var box_size = 60;
-				
-				var collect_list = ds_list_create();
-				ds_list_clear(collect_list);
-				if ds_map_is_list(quest_data_map, "Collect") {
-					collect_list = ds_map_find_value(quest_data_map, "Collect");
+
+				if ds_map_is_list(quest_data_map, "Objects") {
+					var collect_list = ds_list_create();
+					ds_list_clear(collect_list);
+					collect_list = ds_map_find_value(quest_data_map, "Objects");
 				} else {
 					collect_list = 0;
+					break;
 				}
 
 				//collect list 
 				for(var list_index = 0; list_index < ds_list_size(collect_list); list_index++) {
 					#region Draw the items that need to be collected
-						var xpos = page_l + box_size * i;
+						var xpos = page_l + box_size * list_index;
 						var ypos = lower_y;
 					
-						draw_rectangle(xpos, ypos, page_l + box_size * (i + 1), lower_y + box_size, true);
-
-						var spr = ds_list_find_value(collect_list, list_index);
+						draw_rectangle(xpos, ypos, page_l + box_size * (list_index + 1), lower_y + box_size, true);
+						
+						var spr = object_get_sprite(ds_list_find_value(collect_list, list_index));
 						var spr_w = sprite_get_width(spr);
 						var spr_h = sprite_get_height(spr);
 						var stretch_to = box_size;

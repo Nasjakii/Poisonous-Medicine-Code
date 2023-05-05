@@ -208,6 +208,7 @@ sin_x = 0;
 		state_talking = function() {
 			scr_debug_info("State", "Talking");
 			can_move = false;
+			set_animation("Idle");
 			
 			if dialog_active == false {
 				state = state_idle;
