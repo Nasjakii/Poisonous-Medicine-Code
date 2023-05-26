@@ -2,8 +2,6 @@ x = objKiller.x;
 y = objKiller.y;
 
 
-
-
 if keyboard_check_pressed(vk_up) && !instance_exists(objCameraMan) {
 	curr_view = "Camera";
 	
@@ -61,7 +59,7 @@ switch(curr_view) {
 	case("Special"):
 		if special_object != -1 {
 			var o = special_object;
-			scr_special_camera_create(o.bbox_left - 150, o.bbox_top - 50, o.bbox_right + 150);
+			scr_special_camera_create(o.bbox_left - 150, o.bbox_top - 100, o.bbox_right + 150);
 		}
 	break;
 	default:

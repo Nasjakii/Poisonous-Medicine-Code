@@ -38,6 +38,7 @@ sin_x = 0;
 		
 		set_animation("Idle");
 		state = state_idle;
+		can_move = true;
 		
 	}
 	#endregion
@@ -225,6 +226,14 @@ sin_x = 0;
 			scr_debug_info("State", "Captured");
 			can_move = false;
 			
+			
+		}
+	#endregion
+	
+	#region state playing
+		state_playing = function() {
+			scr_debug_info("State", "Playing");
+			can_move = false;
 			
 		}
 	#endregion

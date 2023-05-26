@@ -1,0 +1,51 @@
+{
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tlClockhouseGround",
+  "autoTileSets": [],
+  "macroPageTiles": {
+    "SerialiseHeight": 3,
+    "SerialiseWidth": 2,
+    "TileCompressedData": [
+      -4,
+      0,
+      2,
+      1,
+      2,
+    ],
+    "TileDataFormat": 1,
+  },
+  "out_columns": 2,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Clockhouse",
+    "path": "folders/Tile Sets/Clockhouse.yy",
+  },
+  "spriteId": {
+    "name": "sprPharmacyBackroomGround",
+    "path": "sprites/sprPharmacyBackroomGround/sprPharmacyBackroomGround.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 3,
+  "tileAnimation": {
+    "FrameData": [
+      0,
+      1,
+      2,
+    ],
+    "SerialiseFrameCount": 1,
+  },
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 64,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 64,
+  "tilexoff": 0,
+  "tileyoff": 0,
+}

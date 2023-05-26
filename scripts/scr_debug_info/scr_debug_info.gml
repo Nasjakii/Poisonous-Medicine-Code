@@ -26,6 +26,9 @@ function scr_debug_info(type, set_to){
 			position = 5;
 			str += "Event Index: " + set_to;
 		break;
+		case("Progress"):
+			str += "Progress: " + set_to;
+		break;
 		default:
 			position = 6;
 			str += string(set_to);

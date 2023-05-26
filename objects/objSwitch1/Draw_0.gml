@@ -1,4 +1,4 @@
-
+scr_interactable_draw();
 
 
 if interact == true {
