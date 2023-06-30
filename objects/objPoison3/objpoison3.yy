@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Props",
-    "path": "folders/Objects/Brewroom/Props.yy",
+    "path": "folders/Objects/Pharmacy/Brewroom/Props.yy",
   },
   "parentObjectId": null,
   "persistent": false,

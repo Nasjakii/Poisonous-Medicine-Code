@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Craftingroom",
-    "path": "folders/Objects/Craftingroom.yy",
+    "path": "folders/Objects/Pharmacy/Craftingroom.yy",
   },
   "parentObjectId": null,
   "persistent": false,

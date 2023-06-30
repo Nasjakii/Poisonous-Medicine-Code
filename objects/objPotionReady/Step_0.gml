@@ -1,12 +1,12 @@
 
 if add_note {
-	if keyboard_check_released(vk_enter) || l_click {
+	if keyboard_check_released(vk_enter) || l_released {
 		add_note = false;
 		scr_start_message_gui("Note Saved"); //TODO Save node
 	}
 }
 
-if scr_in_bounds_object(mouse_x, mouse_y, id) && l_click {
+if scr_in_bounds_object(mouse_x, mouse_y, id) && l_released {
 
 	add_note = !add_note;
 	
@@ -20,7 +20,7 @@ if scr_in_bounds_object(mouse_x, mouse_y, id) && l_click {
 	
 
 
-	//if the recepie is right for quest
+	//if the recipe is right for quest
 	if global.event_index <= 1 {
 		global.event_index = 2;
 	}

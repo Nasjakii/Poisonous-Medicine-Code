@@ -5,6 +5,9 @@ scr_player_monolog_create();
 
 scr_spawn_player();
 
+if !variable_global_exists("item_holding") {
+	global.item_holding = -1;
+}
 
 
 speed_running = 7.5;
@@ -19,7 +22,7 @@ sin_x = 0;
 
 #region Items
 
-	item_holding = -1;
+	
 
 #endregion
 

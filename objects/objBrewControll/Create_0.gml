@@ -1,28 +1,19 @@
 
+//brew controller
+
 //Graphik settings
 display_set_gui_size(1920, 1080);
 
-selected_bottle = 0;
-fillheight = 0;
-fillheight_max = 26 * objTestTube.image_yscale;
 
-fillheight_increment = 5 * objTestTube.image_yscale;
+selected_ingredient = 0;
 
 //Ingredients
-ds_bottles[0] = objPotion1;
-ds_bottles[1] = objBmsIngredient;
-ds_bottles[2] = objPoppyIngredient;
-ds_bottles[3] = objTartarIngredient;
-ds_bottles[4] = objWPIngredient;
+ingredients_arr[0] = objPotion1;
+ingredients_arr[1] = objBmsIngredient;
+ingredients_arr[2] = objPoppyIngredient;
+ingredients_arr[3] = objTartarIngredient;
+ingredients_arr[4] = objWPIngredient;
 
-
-ds_colorList = ds_list_create();
-mix_color = make_color_rgb(255,255,255); //starting color = white
-
-//cooking time
-cooking = false;
-cooking_time = 3 * room_speed;
-cooked_timer = cooking_time;
 
 
 //Notes

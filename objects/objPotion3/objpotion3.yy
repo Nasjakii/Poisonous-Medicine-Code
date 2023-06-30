@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Set Potions",
-    "path": "folders/Objects/Brewroom/Set Potions.yy",
+    "path": "folders/Objects/Pharmacy/Brewroom/Set Potions.yy",
   },
   "parentObjectId": null,
   "persistent": false,

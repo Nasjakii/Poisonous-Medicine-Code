@@ -1,6 +1,6 @@
 
 
-var inst = instance_create_layer(x,y,"Lights", objLightEffect1);
+var inst = instance_create_layer(x,y,"Lights", objLightTest2);
 
 
 inst.image_xscale = 1;

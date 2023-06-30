@@ -3,8 +3,8 @@ function scr_victim_step(){
 	//Interacting with victim
 	if interact == true && item_interacted_with == -1 {
 		//getting the item holding
-		if objKiller.item_holding != -1 {
-			var spr_item = objKiller.item_holding;
+		if global.item_holding != -1 {
+			var spr_item = objKiller.global.item_holding;
 			var item_index = scr_get_item_index(-1, spr_item);
 			//Used item
 			if item_index != -1 {

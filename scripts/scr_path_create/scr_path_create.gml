@@ -12,10 +12,12 @@ function scr_path_create(custom_path_name, path_list, room_list, object){
 		ds_list_add(times, time);
 	}
 	
+
+	var start_room = ds_list_find_value(room_list, 0);
 	
 	ds_map_add_list(custom_path, "Paths", path_list);
 	ds_map_add_list(custom_path, "Rooms", room_list);
-	ds_map_add(     custom_path, "Room", ds_list_find_index(room_list, 0)); //Current room
+	ds_map_add(     custom_path, "Room",  start_room); //Current room
 	ds_map_add_list(custom_path, "Times", times);
 	ds_map_add(     custom_path, "State", 0); //0 not started
 										      //1 active

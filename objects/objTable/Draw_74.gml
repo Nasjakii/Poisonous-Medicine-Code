@@ -72,7 +72,7 @@ for(var i = 0; i < inventory_size / 2; i++) {
 		for(i = 0; i < inventory_size; i++) {
 			if itembox_h[i] && inventory_array_local[i,0] != -1{
 				//hold the item array
-				item_holding = scr_array_get_out(item_holding, inventory_array_local, i);
+				global.item_holding = scr_array_get_out(global.item_holding, inventory_array_local, i);
 				//delete item from local array
 				inventory_array_local[i,0] = -1;
 				inventory_array_local[i,1] = -1;
@@ -100,7 +100,7 @@ for(var i = 0; i < inventory_size / 2; i++) {
 			
 					if scr_in_bounds(mouse_x,mouse_y,xpos,ypos,xpos2,ypos2) {
 						//Transfer attributes from object to array holding
-						item_holding = scr_list_to_array(desk_array[i,0].ds_list_values);
+						global.item_holding = scr_list_to_array(desk_array[i,0].ds_list_values);
 						//Destroy object from table
 						instance_destroy(desk_array[i,0]);
 						//Reset Variables
@@ -127,18 +127,18 @@ if mouse_check_button_released(mb_left) {
 
 	#region place object in desk array 
 	//over desk ?
-	if item_holding[0] != -1 && scr_in_bounds(mouse_x_gui, mouse_y_gui, desk_gui_x, desk_gui_y, desk_gui_x + desk_gui_w, desk_gui_y + desk_gui_h) {
+	if global.item_holding[0] != -1 && scr_in_bounds(mouse_x_gui, mouse_y_gui, desk_gui_x, desk_gui_y, desk_gui_x + desk_gui_w, desk_gui_y + desk_gui_h) {
 		for(var i = 0; i < array_length(desk_array); i++) {
 			//free slot
 			if desk_array[i,0] == -1 {
 				
 				//Create instance with all atributes 
-				desk_array[i,0] = scr_create_crafting_instance(item_holding[0], mouse_x, mouse_y, scale, item_holding);	
+				desk_array[i,0] = scr_create_crafting_instance(global.item_holding[0], mouse_x, mouse_y, scale, global.item_holding);	
 				desk_array[i,1] = mouse_x - desk_array[i,0].sprite_xoffset;
 				desk_array[i,2] = mouse_y - desk_array[i,0].sprite_yoffset;
 		
-				//Reset the item_holding array
-				item_holding = scr_array_set_all(item_holding,-1);
+				//Reset the global.item_holding array
+				global.item_holding = scr_array_set_all(global.item_holding,-1);
 				
 				//Is on a different item ?
 				var inst = desk_array[i,0];						//Not checking for itself
@@ -167,11 +167,11 @@ if mouse_check_button_released(mb_left) {
 	#region over slots
 	
 		for(var i = 0; i < inventory_size; i++) {
-			if itembox_h[i] && item_holding[0] != -1 && inventory_array_local[i,0] == -1 {
+			if itembox_h[i] && global.item_holding[0] != -1 && inventory_array_local[i,0] == -1 {
 				//Place item in local inventory
-				inventory_array_local = scr_array_set_in(inventory_array_local, i, item_holding);
+				inventory_array_local = scr_array_set_in(inventory_array_local, i, global.item_holding);
 				//Reset item holding
-				item_holding = scr_array_set_all(item_holding,-1);
+				global.item_holding = scr_array_set_all(global.item_holding,-1);
 				break;
 			}
 		}
@@ -186,8 +186,8 @@ if mouse_check_button_released(mb_left) {
 #region draw at gui
 
 //Draw the holding item at cursor
-if item_holding[0] != -1 {
-	var spr = item_holding[0];
+if global.item_holding[0] != -1 {
+	var spr = global.item_holding[0];
 	var spr_w = sprite_get_width(spr);
 	var spr_h = sprite_get_height(spr);
 	var rescale = 4;

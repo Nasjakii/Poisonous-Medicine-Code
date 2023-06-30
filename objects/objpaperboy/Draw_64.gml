@@ -10,10 +10,15 @@ if interact {
 }
 
 if dialog_index == 1 { //test
-	//draw_sprite(sprPaper1,1,gui_width / 2 - sprite_get_width(sprPaper1) / 2, 0);
+	scr_quest_set_state("Kill Bartholomew", 0); //TODO activate quest when looking at paper
+	show_paper = true;
+	dialog_index++;
 }
 
-
+if show_paper {
+	draw_sprite(sprPaper1,1,gui_width / 2 - sprite_get_width(sprPaper1) / 2, 0);
+	if keyboard_check(vk_space) show_paper = false;
+}
 
 
 

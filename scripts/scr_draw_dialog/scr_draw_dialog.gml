@@ -25,20 +25,21 @@ function scr_draw_dialog(d_index = dialog_index){
 	#region Load text
 		var text = [];
 		if special_interact_index <= global.event_index {
-			if dialog_type != "Special" dialog_type = "Special"; //special interact
+			dialog_type = "Special"; 
 			
 			text = special_arr[special_interact_index];
 			//special camera
 			scr_camera_set("Special", id);
 
 		} else {
+			
 			if array_length(text_arr) > d_index && text_arr != 0 {
 				dialog_type = "Normal"; //normal interact
 				
 				text = text_arr[d_index];
 			} else {
 				dialog_type = "End"; //TODO Enddialog	
-				text[0] = "Do you need anything?";
+				text = end_arr[dialog_index];
 			}
 			
 		}
@@ -100,7 +101,7 @@ function scr_draw_dialog(d_index = dialog_index){
 					scr_safe("Real", name, "dialog_index", dialog_index);
 				break;
 				case("End"):
-				
+					
 				break;
 			}
 			

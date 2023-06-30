@@ -1,0 +1,111 @@
+{
+"skeleton": {
+	"hash": "BbeswhD9/m8",
+	"spine": "4.1.21",
+	"x": -64,
+	"y": -64,
+	"width": 128,
+	"height": 128,
+	"images": "../Clockwork/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 23.66, "rotation": 90, "x": -0.06, "y": 0.41 },
+	{ "name": "bone2", "parent": "root", "length": 18.78, "rotation": 90, "x": -23.91, "y": 40.39 },
+	{ "name": "bone3", "parent": "root", "length": 13.89, "rotation": 90, "x": -41.15, "y": -11.06 },
+	{ "name": "bone4", "parent": "root", "length": 19.81, "rotation": 90, "x": 38.72, "y": -30.09 },
+	{ "name": "bone5", "parent": "root", "length": 9.39, "rotation": 90, "x": 9.91, "y": -43.72 },
+	{ "name": "bone6", "parent": "root", "length": 16.33, "rotation": 90, "x": 43.87, "y": 8.75 },
+	{ "name": "bone7", "parent": "root", "length": 17.49, "rotation": 90, "x": 26.89, "y": -5.27 }
+],
+"slots": [
+	{ "name": "Layer 1", "bone": "bone", "attachment": "Layer 1" },
+	{ "name": "Layer 2", "bone": "bone4", "attachment": "Layer 2" },
+	{ "name": "Layer 3", "bone": "bone2", "attachment": "Layer 3" },
+	{ "name": "Layer 4", "bone": "bone6", "attachment": "Layer 4" },
+	{ "name": "Layer 5", "bone": "bone7", "attachment": "Layer 5" },
+	{ "name": "Layer 6", "bone": "bone3", "attachment": "Layer 6" },
+	{ "name": "Layer 7", "bone": "bone5", "attachment": "Layer 7" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Layer 1": {
+				"Layer 1": { "x": -0.41, "y": -0.06, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 2": {
+				"Layer 2": { "x": 30.09, "y": 38.72, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 3": {
+				"Layer 3": { "x": -40.39, "y": -23.91, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 4": {
+				"Layer 4": { "x": -8.75, "y": 43.87, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 5": {
+				"Layer 5": { "x": 5.27, "y": 26.89, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 6": {
+				"Layer 6": { "x": 11.06, "y": -41.15, "rotation": -90, "width": 128, "height": 128 }
+			},
+			"Layer 7": {
+				"Layer 7": { "x": 43.72, "y": 9.91, "rotation": -90, "width": 128, "height": 128 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 1.3333, "value": -359.53 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{},
+					{ "time": 1.3333, "value": 360.05 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": 359.67 },
+					{ "time": 1.3333, "value": 720.88 }
+				]
+			},
+			"bone4": {
+				"rotate": [
+					{},
+					{ "time": 1.3333, "value": 359.79 }
+				]
+			},
+			"bone5": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": -359.88 },
+					{ "time": 1.3333, "value": -719.6 }
+				]
+			},
+			"bone6": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": -360 },
+					{ "time": 1.3333, "value": -719.72 }
+				]
+			},
+			"bone7": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "value": 359.85 },
+					{ "time": 1.3333, "value": 719.98 }
+				]
+			}
+		}
+	}
+}
+}

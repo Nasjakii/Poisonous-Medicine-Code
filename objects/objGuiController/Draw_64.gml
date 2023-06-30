@@ -79,9 +79,9 @@ if instance_exists(objKiller) {
 //Select Item    TODO rework when not hovered anymore remove item_hovered
 if (mouse_check_button_released(mb_left) && keyboard_check(vk_tab)) || keyboard_check_released(vk_tab) {
 	if item_hovered == sprHandItem {
-		objKiller.item_holding = -1;
+		global.item_holding = -1;
 	} else {
-		objKiller.item_holding = item_hovered;
+		global.item_holding = item_hovered;
 	}
 
 }
@@ -95,7 +95,7 @@ if (mouse_check_button_released(mb_left) && keyboard_check(vk_tab)) || keyboard_
 //Icon in the top-left corner
 draw_sprite(sprBookIcon, sprBookIcon_subimg, 0,0);
 if scr_in_bounds(mouse_x_gui, mouse_y_gui, 0,0,sprite_get_width(sprBookIcon), sprite_get_height(sprBookIcon)) 
-	&& l_click {
+	&& l_released {
 	global.show_book = !global.show_book;
 }
 

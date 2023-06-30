@@ -1,6 +1,8 @@
 
 if interact {
 	
+	
+	
 	if scr_get_item_holding() != object_get_sprite(objWranch) {
 		//Open overlay with turning cogs
 		draw_sprite(sprCog1, 1, gui_width / 2, gui_height / 2);
@@ -10,6 +12,8 @@ if interact {
 		
 		//until you interact with an wranch or something with it
 		//then shows a stuck version of the tower
+		scr_path_set_state("Clockwork Failure", 1);
+		image_speed = 0;
 		
 		
 		//Start timer so you have time left until the assistent notices

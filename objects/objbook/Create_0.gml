@@ -163,6 +163,15 @@ global.show_book = false;
 
 	
 	#endregion
+	
+	#region recipe
+		recipe_map = ds_map_create();
+		
+		var spr_list = ds_list_create();
+		ds_list_add(spr_list, sprPoppy, sprSyringe, sprPoppy, sprKey);
+		scr_add_recipe("Test", spr_list);
+		
+	#endregion
 
 #endregion
 

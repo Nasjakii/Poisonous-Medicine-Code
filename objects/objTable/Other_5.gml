@@ -19,11 +19,11 @@ for(var i = 0; i < array_length(desk_array); i++) {
 
 
 //Get item held
-if item_holding[0] != -1 {
+if global.item_holding[0] != -1 {
 	for(var i = 0; i < array_length(arr); i++) {
 		//find free spot
 		if arr[i,0] == -1 {
-			arr = scr_array_set_in(arr, i, item_holding);
+			arr = scr_array_set_in(arr, i, global.item_holding);
 		}
 	}
 }

@@ -39,7 +39,7 @@ desk_gui_h = sprite_height * gui_scale - 50;
 	inventory_array_local = scr_get_inventory();
 	
 	for(var i = 0; i < array_length(inventory_array_local[0]); i++) {
-		item_holding[i] = -1;
+		global.item_holding[i] = -1;
 	}
 
 

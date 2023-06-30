@@ -8,9 +8,9 @@ draw_rectangle(x,y - string_height(str) / 3,x+string_width(str),y+string_height(
 hitbox[0] = point_in_rectangle(mouse_x, mouse_y,x,y - string_height(str) / 3,x+string_width(str),y+string_height(str) / (4 / 3));
 
 
-if hitbox[0] && l_click && show_room_list == false {
+if hitbox[0] && l_released && show_room_list == false {
 	show_room_list = true;
-} else if show_room_list == true && hitbox[0] && l_click {
+} else if show_room_list == true && hitbox[0] && l_released {
 	show_room_list = false;
 }
 
@@ -23,7 +23,7 @@ if show_room_list == true {
 		hitbox[i+1] =  point_in_rectangle(mouse_x, mouse_y,x,y + (i + 1) * str_h,x+string_width(str),y+ (i + 2) * str_h);
 		draw_rectangle(x,y + (i + 1) * str_h,x+string_width(str),y+ (i + 2) * str_h, true);
 
-		if hitbox[i+1] && l_click {
+		if hitbox[i+1] && l_released {
 			global.continue_room = ds_list_find_value(ds_rooms, i);
 			room_goto(Start);
 			break;

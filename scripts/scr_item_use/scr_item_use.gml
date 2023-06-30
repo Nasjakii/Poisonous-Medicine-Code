@@ -9,7 +9,7 @@ function scr_item_use(index){
 
 	if temp_inventory[index,4] <= 0 {
 		scr_delete_item(index);
-		objKiller.item_holding = -1;
+		global.item_holding = -1;
 	}
 	
 	

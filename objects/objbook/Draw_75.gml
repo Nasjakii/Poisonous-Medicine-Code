@@ -28,7 +28,7 @@ if global.show_book == true {
 		
 		//Swap to page
 		//TODO maybe better solution performance wise
-		if (book_tab_hitbox[i] && l_click) || book_subimage == i {
+		if (book_tab_hitbox[i] && l_released) || book_subimage == i {
 			book_subimage = i;
 		
 			#region swap hitboxes
@@ -57,18 +57,26 @@ if global.show_book == true {
 	#region Chapters
 
 		switch(book_subimage) {
-			case(1): //Potions
+			case(1): 
 			
-				draw_set_font(foText);
-				draw_sprite_ext(sprPotion1, 1, page_left_x + 100, page_up_y + 200, 2,2,0,c_white,1);
+				#region//Potions, recipes
 				
-				draw_text(page_left_x + 200, page_up_y + 150, "Ingredient1");
-				draw_text(page_left_x + 200, page_up_y + 200, "Ingredient2");
-				draw_text(page_left_x + 200, page_up_y + 250, "Ingredient3");
+
+				var recipe_arr = ds_map_keys_to_array(recipe_map);
+				for(var i = 0; i < array_length(recipe_arr); i++) {
+					var title_x = page_left_x + 50;
+					var title_y = page_up_y + 30;
+					
+					draw_set_font(foBookHeadline)
+					draw_text(title_x, title_y, recipe_arr[i]);
+					scr_draw_recipe(recipe_arr[i], title_x + 40, title_y + 60);
+					scr_hover_recipe(recipe_arr[i], title_x + 40, title_y + 60);
+					
+				}
 				
-				scr_draw_text_box(page_right_x - 200, page_up_y + 200, "your_note", 10, foText);
+				scr_reset_text();
 				
-				
+				#endregion
 			
 			break;
 			case(2): //Tools

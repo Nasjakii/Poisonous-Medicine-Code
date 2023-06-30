@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprLight3",
-    "path": "sprites/sprLight3/sprLight3.yy",
+    "name": "sprLight2",
+    "path": "sprites/sprLight2/sprLight2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

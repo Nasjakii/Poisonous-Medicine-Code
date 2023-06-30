@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ingredients",
-    "path": "folders/Objects/Brewroom/Ingredients.yy",
+    "path": "folders/Objects/Pharmacy/Brewroom/Ingredients.yy",
   },
   "parentObjectId": null,
   "persistent": false,

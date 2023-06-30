@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Potion Ready",
-    "path": "folders/Objects/Brewroom/Set Potions/Potion Ready.yy",
+    "path": "folders/Objects/Pharmacy/Brewroom/Set Potions/Potion Ready.yy",
   },
   "parentObjectId": null,
   "persistent": false,

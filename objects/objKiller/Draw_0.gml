@@ -13,8 +13,8 @@ for(i = 0; i < ds_list_size(objGeneral.list_of_collectables); i++) {
 	   with(inst) {
 			scr_draw_inline();
 		}
-	   //mouse over && l_click
-	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
+	   //mouse over && l_released
+	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_released {
 			
 			var interactable = scr_is_interactable(inst.id);
 
@@ -52,11 +52,11 @@ for(var i = 0; i < ds_list_size(objGeneral.list_of_interactables); i++) {
 			draw_outline = true;
 		}
 		if variable_instance_exists(inst, "item_interacted_with") {
-			inst.item_interacted_with = item_holding;
+			inst.item_interacted_with = global.item_holding;
 		}
 		
 	   //all instances that are clicked are compared
-	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_click {
+	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_released {
 			
 			if highest_inst == 0 || highest_inst.depth > inst.depth highest_inst = inst;
 
@@ -67,13 +67,13 @@ for(var i = 0; i < ds_list_size(objGeneral.list_of_interactables); i++) {
 //only click the highest inst
 if highest_inst != 0 {
 	//doesnt want to talk and is a victim
-	if item_holding != -1 && scr_get_victim(inst) {
-		using_item_kind = scr_animation_using(item_holding);
+	if global.item_holding != -1 && scr_get_victim(highest_inst) {
+		using_item_kind = scr_animation_using(global.item_holding);
 		state = state_using;
 	}
 	
 	//interact
-	dialog = scr_subject_talking(inst);
+	dialog = scr_subject_talking(highest_inst);
 	
 	with(highest_inst) {
 		interact = true;
@@ -92,10 +92,10 @@ draw_self();
 
 
 	//if holding an item
-	if item_holding != -1 {
+	if global.item_holding != -1 {
 		
 		//bad solution
-		//draw_sprite(item_holding, 1, x,y);
+		//draw_sprite(global.item_holding, 1, x,y);
 		
 		//get the list of all slot sprites
 		slot_list = ds_list_create();
