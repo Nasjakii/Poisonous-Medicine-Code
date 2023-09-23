@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pharmacy",
-    "path": "folders/Objects/Viewables/Pharmacy.yy",
+    "path": "folders/Objects/Props/Pharmacy.yy",
   },
   "parentObjectId": null,
   "persistent": false,

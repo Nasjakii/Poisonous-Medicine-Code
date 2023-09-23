@@ -18,3 +18,4 @@ function scr_item_interact(item_arr){
 	
 	return effect_array;
 }
+

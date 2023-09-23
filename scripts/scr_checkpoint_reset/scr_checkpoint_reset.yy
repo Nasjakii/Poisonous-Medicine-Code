@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_visible",
+  "name": "scr_checkpoint_reset",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Short",
-    "path": "folders/Scripts/Short.yy",
+    "name": "Checkpoints",
+    "path": "folders/Scripts/Checkpoints.yy",
   },
 }

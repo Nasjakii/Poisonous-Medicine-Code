@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Tailor",
-    "path": "folders/Objects/Viewables/Tailor.yy",
+    "path": "folders/Objects/Props/Tailor.yy",
   },
   "parentObjectId": null,
   "persistent": false,

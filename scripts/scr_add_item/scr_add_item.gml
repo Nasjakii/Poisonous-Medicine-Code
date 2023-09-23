@@ -1,5 +1,5 @@
 
-function scr_add_item(sprite, object, interactable, collectable, count = 1, poison_level = 0){
+function scr_add_item(sprite, object, interactable, collectable, count = 1, effect_arr = []){
 
 	var again = true;
 	//Add count if item already exists
@@ -29,4 +29,17 @@ function scr_add_item(sprite, object, interactable, collectable, count = 1, pois
 	if again {
 		scr_error("Inventory full")
 	}
+}
+
+function scr_create_item(_sprite, _object, _interactable, _collectable, _count = 1, _effect_arr = []) {
+	item = {
+		sprite : _sprite,
+		object : _object,
+		interactable : _interactable,
+		collectable : _collectable,
+		count : _count,
+		effect_arr : _effect_arr
+	}
+	
+	return item;
 }

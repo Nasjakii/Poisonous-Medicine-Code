@@ -11,7 +11,7 @@ if scr_in_bounds_object(mouse_x, mouse_y, id) && l_released {
 	add_note = !add_note;
 	
 
-	scr_add_item(sprPotion1, objPotion1, false, true, 1, 0);
+	scr_add_item(sprPotion1, objPotion1, false, true, 1);
 	
 	draw_fluid = false;
 	mix_color = make_color_rgb(255,255,255);

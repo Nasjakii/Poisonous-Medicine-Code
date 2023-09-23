@@ -4,17 +4,19 @@ scr_create_subject("Guard");
 #region stats
 
 	patrol_speed = 2;
-	return_speed = 3;
-	chase_speed = 5;
 	
 	vision_range = 300;
-	capture_range = 60;
+
+	target = noone;
+	
 #endregion
 
 #region vars
 	capture_time = 3 * room_speed;
 	capture_timer = capture_time;
 
+	noise_x = -1;
+	noise_y = -1;
 #endregion
 
 
@@ -46,33 +48,15 @@ scr_create_subject("Guard");
 		
 		if x < creation_x - patrol_width / 2 {
 			x_speed = patrol_speed;
+			image_xscale = 1;
 		}
 		if x > creation_x + patrol_width / 2 {
 			x_speed = -patrol_speed;
+			image_xscale = -1;
 		}
 
 			
 	}
-	#endregion
-	
-
-	#region state follow
-		target = objKiller;
-		state_follow = function() {
-			state_display = "Follow";
-			
-			if target == noone {
-				state = state_patrol;
-				return;
-			}
-			
-			if target.x > x {
-				x += chase_speed;
-			} else {
-				x -= chase_speed;
-			}
-			
-		}
 	#endregion
 	
 	#region state sleep
@@ -99,7 +83,8 @@ scr_create_subject("Guard");
 
 			if capture_timer <= 0 {
 				objKiller.captured = true;
-				capture_timer = capture_time;
+				scr_checkpoint_reset();
+				
 			} else {
 				capture_timer--;
 			}

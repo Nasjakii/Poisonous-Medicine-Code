@@ -47,10 +47,10 @@
 		
 		 if val >= 0.7 {
 		
-			if objBrewControll.cooked_timer <= objBrewControll.cooking_time {
+			if cooked_timer <= cooking_time {
 
 				objPotionReady.draw_fluid = true;
-				objPotionReady.mix_color = objBrewControll.mix_color;
+				objPotionReady.mix_color = mix_color;
 				scr_reset_fluid();
 				
 			}

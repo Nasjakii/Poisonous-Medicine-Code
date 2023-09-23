@@ -8,9 +8,7 @@ function scr_subject_talk(){
 
 	if interact {
 		scr_draw_dialog(dialog_index);
-	} else {
-		scr_special_camera_reset();
-	} 
+	}
 	
 	
 }

@@ -26,13 +26,10 @@ cursor_sprite = sprCursorNew;
 #region Safesystem
  
 #region TODO Safesystem general
-	ini_open(string(game_project_name) + "_safe.ini");
 
-	global.screen_res_width = ini_read_real("Settings", "Screen_resolution", 1920);
-	global.screen_res_height = ini_read_real("Settings", "Screen_resolution", 1080);
-	global.volume = ini_read_real("Settings", "Volume", 0.5);
- 
-	ini_close();
+	global.screen_res_width = scr_load("Real", "Settings", "Screen_resolution", 1920);
+	global.screen_res_height = scr_load("Real", "Settings", "Screen_resolution", 1080);
+	global.volume = scr_load("Real", "Settings", "Volume", 0.5);
 
 	scr_safe("Real", "Game", "Checkpoint", 1);
 #endregion

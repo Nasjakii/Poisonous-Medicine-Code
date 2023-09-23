@@ -1,6 +1,6 @@
-function scr_visible(obj_looking, obj_target, obj_blocking){
+function scr_line_of_sight(obj_looking, obj_target, obj_blocking){
 	
-	if obj_blocking == noone return false;
+	if obj_blocking == noone || obj_target == noone return false;
 	
 	//makes sure vision from obj a to obj b is not blocked by obj c
 	var _visible = true;
@@ -12,6 +12,7 @@ function scr_visible(obj_looking, obj_target, obj_blocking){
 	if check_top && check_bottom {
 		_visible = false;
 	}
+
 	
 	return _visible;
 }

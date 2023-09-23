@@ -38,8 +38,8 @@ function scr_draw_dialog(d_index = dialog_index){
 				
 				text = text_arr[d_index];
 			} else {
-				dialog_type = "End"; //TODO Enddialog	
-				text = end_arr[dialog_index];
+				dialog_type = "End"; 
+				text = ["End Dialog"];
 			}
 			
 		}
@@ -85,7 +85,7 @@ function scr_draw_dialog(d_index = dialog_index){
 		if text_page < array_length(text) - 1 {
 			text_page++;
 		} else {	
-			scr_safe("Real", name, "dialog_index", dialog_index);
+			scr_safe("Real", name, "dialog_index", dialog_index, "dialog");
 			
 			
 			switch(dialog_type) {
@@ -93,12 +93,12 @@ function scr_draw_dialog(d_index = dialog_index){
 					//next special_interact
 					special_interact_index++; //solution to infinite loop and next sequence not possible
 					special_interact_index = scr_dialog_get_next_sequence(special_interact_index, special_arr);
-					scr_safe("Real", name, "special_interact_index", special_interact_index);
+					scr_safe("Real", name, "special_interact_index", special_interact_index, "dialog");
 				break;
 				case("Normal"):
 					//if it was the last page end the dialog
 					dialog_index++;
-					scr_safe("Real", name, "dialog_index", dialog_index);
+					scr_safe("Real", name, "dialog_index", dialog_index, "dialog");
 				break;
 				case("End"):
 					
@@ -113,7 +113,7 @@ function scr_draw_dialog(d_index = dialog_index){
 				//Reset to page 0
 				text_page = 0;
 				
-				
+				scr_special_camera_reset();
 				scr_camera_set("Player", id);
 				//End Dialog
 				interact = false;

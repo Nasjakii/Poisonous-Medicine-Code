@@ -1,6 +1,6 @@
 
-function scr_safe(type, section, key, value){
-	ini_open(string(game_project_name) + "_safe.ini");
+function scr_safe(type, section, key, value, file_name = "safe"){
+	ini_open(string(game_project_name) +  "_" + file_name + ".ini");
 	if type == "Real" {
 		ini_write_real(section, key, value);
 	} else if type == "String" {

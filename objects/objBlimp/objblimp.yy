@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Viewables",
-    "path": "folders/Objects/Viewables.yy",
+    "name": "Props",
+    "path": "folders/Objects/Props.yy",
   },
   "parentObjectId": null,
   "persistent": false,

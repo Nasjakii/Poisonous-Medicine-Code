@@ -62,6 +62,10 @@ switch(curr_view) {
 			scr_special_camera_create(o.bbox_left - 150, o.bbox_top - 100, o.bbox_right + 150);
 		}
 	break;
+	case("Custom"):
+		//controll yourself e.g zoom 
+		instance_destroy(objCameraKiller);
+	break;
 	default:
 		scr_error("Not a valid Camera", curr_view);
 	break;

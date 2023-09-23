@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Clocktower",
-    "path": "folders/Objects/Viewables/Clocktower.yy",
+    "path": "folders/Objects/Props/Clocktower.yy",
   },
   "parentObjectId": null,
   "persistent": false,

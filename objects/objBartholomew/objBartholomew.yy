@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "People",
-    "path": "folders/Objects/Subjects/People.yy",
+    "name": "Victrims",
+    "path": "folders/Objects/Subjects/People/Victrims.yy",
   },
   "parentObjectId": null,
   "persistent": false,

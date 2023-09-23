@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Buildings",
-    "path": "folders/Objects/Viewables/Outdoor/Buildings.yy",
+    "path": "folders/Objects/Props/Outdoor/Buildings.yy",
   },
   "parentObjectId": null,
   "persistent": false,

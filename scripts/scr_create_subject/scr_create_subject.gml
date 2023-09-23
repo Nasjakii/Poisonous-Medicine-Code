@@ -13,9 +13,6 @@ function scr_create_subject(objName, profile_sprite = sprNothing){
 	//empty elements are important bc of the dialog index
 	special_arr = scr_get_dialog(name, "F");
 	
-	end_arr = scr_get_dialog(name, "E");
-
-	
 	//load dialog
 	dialog_index = scr_load("Real", objName, "dialog_index", 0);
 	

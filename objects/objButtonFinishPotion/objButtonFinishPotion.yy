@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Buttons",
-    "path": "folders/Objects/Buttons.yy",
+    "path": "folders/Objects/GUI/Buttons.yy",
   },
   "parentObjectId": null,
   "persistent": false,

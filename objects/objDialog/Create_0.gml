@@ -1,5 +1,7 @@
 #region Dialogsystem
 
+	//TODO DIALOG SYSTEM REWORK WITH EXCEL
+
 	global.language = "English";
 
 	language_map = ds_map_create();
@@ -133,7 +135,7 @@
 			dialog_content_arr[0,1] = "Hello Jacob.";
 			
 			dialog_content_arr[1,0] = "E";
-			dialog_content_arr[1,0] = "Kümmer dich bitte um die Kunden.";
+			dialog_content_arr[1,0] = "Please help the customer at the counter.";
 
 			ds_map_add_map(character_map[0], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
 
@@ -146,7 +148,7 @@
 			dialog_content_arr[0,1] = "Hallo Jacob.";
 			
 			dialog_content_arr[1,0] = "E";
-			dialog_content_arr[1,0] = "Please help the customer at the counter.";
+			dialog_content_arr[1,0] = "Kümmer dich bitte um die Kunden.";
 	
 			//Adding
 			ds_map_add_map(character_map[1], obj_name, scr_dialog_add_array(dialog_content_arr, obj_name));
