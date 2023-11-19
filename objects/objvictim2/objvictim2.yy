@@ -14,7 +14,10 @@
     "name": "Victrims",
     "path": "folders/Objects/Subjects/People/Victrims.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objInteractableParent",
+    "path": "objects/objInteractableParent/objInteractableParent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

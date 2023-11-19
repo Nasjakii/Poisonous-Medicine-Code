@@ -2,51 +2,21 @@ global.show_book = false;
 
 #region Item Manager
 	
-	#region manage
-		//inventory_items_arr[i,spr];
+	
+	
+	scr_initialize_inventory();
+	
+	scr_delete_item_from_inventory("Lamp");
+	//scr_add_item_to_invetory("Lamp");
+	
 		
-		//Data
-		inventory_name_arr[0] = "Sprite";
-		inventory_name_arr[1] = "Object";
-		inventory_name_arr[2] = "Interactable";
-		inventory_name_arr[3] = "Collectable";
-		inventory_name_arr[4] = "Count";
-		//Effects
-		inventory_name_arr[5] = "Poison_Level";
-		
-		
-	
-		//scr_add_item argumente müssen bei neuen Items angepasst werden
-	
-	#endregion
-	
-	//Initialize Inventory
-	for(var i = 0; i < global.inventory_size; i++) {
-		scr_item_reset(i);
-	}
-	
-
-	scr_load_inventory();
-	
-	scr_clear_inventory();
-	
-	
-	scr_add_item(sprKey,objKey,1,1,1);
-	scr_add_item(sprSyringe, objSyringe, 1,1,1);
-	scr_add_item(sprTartaremetic, objTartaremetic, 0, 1, 1);
-	scr_add_item(sprPotion1, objPotion1, 1, 0, 1, [0.1]);
-	
-	scr_add_item(sprHandlamp, objHandlamp, 1,0);
-
-
-	scr_create_item(sprPotion1, objPotion1, 1, 0, 1, [0.1]);
+	scr_create_potion("Potion Test", c_red, "");
+	//scr_add_item_to_invetory("Potion Test");
 
 	
 	scr_safe_inventory();
 	
 
-	
-	
 	
 #endregion
 
@@ -154,7 +124,7 @@ global.show_book = false;
 	book_itembox_x = page_left_x + itembox_size;	
 	
 	var i;
-	for(i = 0; i < array_length(inventory_items_arr); i++) {
+	for(i = 0; i < array_length(inventory); i++) {
 		book_itembox_y[i] = book_page_yoffset + (itembox_size + itembox_gap) * i + itembox_yoffset;	
 	}
 	#endregion

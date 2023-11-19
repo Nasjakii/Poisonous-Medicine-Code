@@ -4,17 +4,10 @@ function scr_victim_step(){
 	if interact == true && item_interacted_with == -1 {
 		//getting the item holding
 		if global.item_holding != -1 {
-			var spr_item = objKiller.global.item_holding;
-			var item_index = scr_get_item_index(-1, spr_item);
-			//Used item
-			if item_index != -1 {
-				//give array of item
-				item_interacted_with = scr_get_item(item_index); 
-				//end interaction
-				interact = false;
-				//set effect array to null so it can be re-defined
-				effect_array = [];	
-			}
+			item_interacted_with = global.item_holding; 
+			//end interaction
+			interact = false;
+
 		} else {
 			//just talking -> draw GUI
 			talking = true;
@@ -28,7 +21,7 @@ function scr_victim_step(){
 		//Set the Stats
 		if array_length(effect_array) == 0 {
 			//Stats of the item used
-			effect_array = scr_item_interact(item_interacted_with);
+			scr_item_interact(item_interacted_with);
 			item_interacted_with = -1; //reset for talking and other items to be used
 		} 
 

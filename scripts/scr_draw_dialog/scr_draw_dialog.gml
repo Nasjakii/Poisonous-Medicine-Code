@@ -1,26 +1,9 @@
 
 function scr_draw_dialog(d_index = dialog_index){
 	
-	#region Variablen Instanziieren
-	
-		//look of the text
-		if !variable_instance_exists(id, "pretty_str_index") {
-			pretty_str_index = 0;
-		} else {
-			pretty_str_index++;
-		}
-		
-		//What page you are on
-		if !variable_instance_exists(id, "text_page") {
-			text_page = 0;
-		} 
-		
-		//Dialog type default
-		if !variable_instance_exists(id, "dialog_type") {
-			dialog_type = "End";
-		} 
-	#endregion
-	
+	static text_page = 0;
+	static dialog_type = "End";
+
 	
 	#region Load text
 		var text = [];
@@ -55,31 +38,13 @@ function scr_draw_dialog(d_index = dialog_index){
 	#region Text positions, font and profile
 		var sprite = profile;
 	
-		var xpos = (gui_width - sprite_get_width(sprDialogWindow)) / 2;
-		var ypos = gui_height - sprite_get_height(sprDialogWindow);
 
-		//draw only the string to a certain point (0 to pretty str index)
-		var pretty_str = string_copy(text[text_page],0,pretty_str_index);
-	
-		draw_sprite(sprite, 1, xpos - sprite_get_width(sprite), gui_height - sprite_get_height(sprite));
-		draw_sprite(sprDialogWindow, 1, xpos, ypos);
-		scr_set_text(c_black,fa_left,fa_top, foCustom);
-		draw_text_ext(xpos + 60, ypos + 60, pretty_str, string_height(pretty_str),sprite_get_width(sprDialogWindow)-120);
-		scr_reset_text();
+		scr_dialog_draw_text(text[text_page]);
 	#endregion
 	
-	#region comfort
-		//Quick draw text
-		if keyboard_check_direct(vk_space) {
-			//double speed
-			pretty_str_index++;
-		}
-	#endregion
-	
+
 	//Next page
-	if keyboard_check_released(vk_space) && pretty_str_index >= string_length(text[text_page]){
-		//reset the string "animation"
-		pretty_str_index = 0;
+	if keyboard_check_released(vk_space) {
 
 		//go to next page if its not the last
 		if text_page < array_length(text) - 1 {

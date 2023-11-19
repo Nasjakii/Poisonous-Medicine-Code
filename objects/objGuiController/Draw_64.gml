@@ -15,22 +15,23 @@ if instance_exists(objKiller) {
 		//Add Items from the Inventory that are interactable
 		var selection_list = ds_list_create();
 		var temp_inventory = scr_get_inventory();
+
 		
 		//No item
 		ds_list_add(selection_list, sprHandItem);
 		
 		for(var i = 0; i < array_length(temp_inventory); i++) {	
-			// is interactable 
-			if temp_inventory[i,2] == 1 {
+			
+			if temp_inventory[i] != -1 && temp_inventory[i].usable {
 				//add sprite
-				ds_list_add(selection_list, temp_inventory[i,0]);
+				ds_list_add(selection_list, temp_inventory[i].sprite);
 			}
 		}
 		
 		#region Circle Hitbox
 			#region bugged
 				//Angle size of the circle parts
-				var deg_mult = 360 / ds_list_size(selection_list);
+				var deg_mult = min(45, 360 / ds_list_size(selection_list));
 		
 				var i;
 				for(i = 0; i < ds_list_size(selection_list); i++) {

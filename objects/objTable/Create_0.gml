@@ -36,17 +36,18 @@ desk_gui_h = sprite_height * gui_scale - 50;
 #region items on desk
 
 	//Array with all items from the Inventory
-	inventory_array_local = scr_get_inventory();
+	inventory_local = scr_get_inventory();
 	
-	for(var i = 0; i < array_length(inventory_array_local[0]); i++) {
+	for(var i = 0; i < array_length(inventory_local[0]); i++) {
 		global.item_holding[i] = -1;
 	}
 
 
 	for(var i = 0; i < inventory_size; i++) {
-		desk_array[i,0] = -1; //id of the object on the desk
+		desk_array[i,0] = -1; //item class
 		desk_array[i,1] = 0; //xpos
 		desk_array[i,2] = 0; //ypos
+		desk_array[i,3] = -1 //instance id
 	}
 #endregion
 

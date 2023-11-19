@@ -10,8 +10,9 @@ if scr_in_bounds_object(mouse_x, mouse_y, id) && l_released {
 
 	add_note = !add_note;
 	
+	scr_create_potion("Potion Made", mix_color, "")
+	scr_add_item_to_invetory("Potion Made");
 
-	scr_add_item(sprPotion1, objPotion1, false, true, 1);
 	
 	draw_fluid = false;
 	mix_color = make_color_rgb(255,255,255);

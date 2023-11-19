@@ -12,7 +12,10 @@
     "name": "Doors",
     "path": "folders/Objects/Interactable Objects/Doors.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objInteractableParent",
+    "path": "objects/objInteractableParent/objInteractableParent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

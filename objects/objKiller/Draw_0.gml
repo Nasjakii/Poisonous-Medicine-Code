@@ -10,9 +10,7 @@ for(i = 0; i < ds_list_size(objGeneral.list_of_collectables); i++) {
 	//Object exists && character in Range 
 	if instance_exists(inst) && scr_in_range(inst) && !global.show_book {
 	   
-	   with(inst) {
-			scr_draw_inline();
-		}
+	   draw_arrow(inst.bbox_left, inst.y - 30, inst.bbox_right, inst.y, 10);
 	   //mouse over && l_released
 	   if scr_in_bounds(mouse_x, mouse_y, inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom) && l_released {
 			
@@ -49,7 +47,8 @@ for(var i = 0; i < ds_list_size(objGeneral.list_of_interactables); i++) {
 		
 		//draw inline
 		with(inst) {
-			draw_outline = true;
+			//Mark TODO
+			draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
 		}
 		if variable_instance_exists(inst, "item_interacted_with") {
 			inst.item_interacted_with = global.item_holding;

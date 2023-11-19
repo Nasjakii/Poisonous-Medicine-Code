@@ -1,12 +1,13 @@
-function scr_item_in_inventory(spr_index){
+function scr_item_in_inventory(item_name){
 	var inventory = scr_get_inventory();
 	
-	
-	for(var i = 0; i < array_length(inventory); i++) {
-		if spr_index == inventory[i,0] {
-			return true;
-		} 
+	var found = false;
+	for(var i = 0; i < global.inventory_size; i++) {
+		var item = inventory[i];
+		if item.name == item_name {
+			found = true;
+			break;
+		}
 	}
-	//default case
-	return false;
+	return found;
 }

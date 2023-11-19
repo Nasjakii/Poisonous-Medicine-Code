@@ -1,45 +1,22 @@
+///@description add an item by the item_name defined in the objItemController
+function scr_add_item_to_invetory(item_name){
 
-function scr_add_item(sprite, object, interactable, collectable, count = 1, effect_arr = []){
 
-	var again = true;
-	//Add count if item already exists
 	for(var i = 0; i < global.inventory_size; i++) {
-		if objBook.inventory_items_arr[i,1] == object {
-			objBook.inventory_items_arr[i,4] += count;
-			again = false;
+		if objBook.inventory[i] == -1 {
+			var item = ds_map_find_value(objItemController.item_map, item_name);
+			if is_undefined(item) scr_error("Item not found", item);
+			objBook.inventory[i] = item;
 			break;
 		}
 	}
 	
-	//Add new Item
-	if again {
-		for(var i = 0; i < global.inventory_size; i++) {
-			if objBook.inventory_items_arr[i,0] == -1 {
-				for(var i2 = 0; i2 < argument_count; i2++) {
-					objBook.inventory_items_arr[i,i2] = argument[i2];
-				}
-				
-				again = false;
-				break;
-			}
-		}
-	}
+	//TODO inventory full
 	
 	
-	if again {
-		scr_error("Inventory full")
-	}
 }
 
-function scr_create_item(_sprite, _object, _interactable, _collectable, _count = 1, _effect_arr = []) {
-	item = {
-		sprite : _sprite,
-		object : _object,
-		interactable : _interactable,
-		collectable : _collectable,
-		count : _count,
-		effect_arr : _effect_arr
-	}
-	
-	return item;
+function scr_create_potion(potion_name, color, effect) {
+	//TODO right sprite
+	objItemController.add_item(potion_name, sprPotion1, true, effect);
 }

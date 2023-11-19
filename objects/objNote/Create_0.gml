@@ -1,3 +1,3 @@
 
-scr_create_object(true, false, 1);
+scr_create_object(true, false);
 

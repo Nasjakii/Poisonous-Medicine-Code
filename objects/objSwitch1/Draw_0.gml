@@ -1,4 +1,4 @@
-scr_interactable_draw();
+event_inherited();
 
 
 if interact == true {

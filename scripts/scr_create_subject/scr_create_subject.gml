@@ -27,7 +27,7 @@ function scr_create_subject(objName, profile_sprite = sprNothing){
 	
 	state = "Idle";
 	
-	scr_create_object(false, true, 1);
+	event_inherited();
 	
 	
 }

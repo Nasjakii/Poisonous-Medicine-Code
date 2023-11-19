@@ -1,2 +1,2 @@
 
-scr_create_object(false, true);
+event_inherited();

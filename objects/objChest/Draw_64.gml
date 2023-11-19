@@ -30,6 +30,7 @@ if interact {
 		var inv_arr = scr_get_inventory();
 		for(var i = 0; i < global.inventory_size; i++) {
 			
+			
 			var xpos = gui_width / 2 - chest_slots / 2 * slot_size;
 			var ypos = 600;
 			if i > global.inventory_size / 2 -1 {
@@ -44,8 +45,9 @@ if interact {
 						   xpos + (i+1) * slot_size, ypos + slot_size, false);
 			draw_set_alpha(1);
 			
-
-			var spr = inv_arr[i,0];
+			if !is_instanceof(inv_arr[i], objItemController.Item) continue;
+			
+			var spr = inv_arr[i].sprite;
 			if spr != -1 {
 				var spr_w = sprite_get_width(spr);
 				var spr_h = sprite_get_height(spr);

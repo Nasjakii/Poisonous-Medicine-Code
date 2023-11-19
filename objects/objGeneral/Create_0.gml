@@ -1,3 +1,7 @@
+instance_create_layer(0,0,layer,objItemController);
+instance_create_layer(0,0,layer,objPathController);
+
+
 #region Debug
 	
 	draw_debug = false;

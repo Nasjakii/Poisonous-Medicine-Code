@@ -1,7 +1,7 @@
 
 function scr_items_combine(item1,item2){
 						//getting the sprites from objCraftingInstance to differ items
-	var combination_str = sprite_get_name(item1.sprite_index) + " " + sprite_get_name(item2.sprite_index);
+	var combination_str = item1.name + " " + item2.name
 
 
 	switch(combination_str) {

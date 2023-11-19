@@ -7,7 +7,6 @@ function scr_create_single_object(obj){
 		return inst;
 
 	} else {
-		scr_error("Trying to create multiple objects: ", object_get_name(obj));
 		return false;
 	}
 }

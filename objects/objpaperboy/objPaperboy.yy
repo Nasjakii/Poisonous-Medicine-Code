@@ -13,7 +13,10 @@
     "name": "People",
     "path": "folders/Objects/Subjects/People.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objInteractableParent",
+    "path": "objects/objInteractableParent/objInteractableParent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

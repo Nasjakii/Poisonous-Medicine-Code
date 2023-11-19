@@ -94,10 +94,10 @@ if global.show_book == true {
 						draw_sprite(sprItembox, i, book_itembox_x, book_itembox_y[i]);
 						
 						//Draw the items in the boxes
-						if inventory_items_arr[i,0] != -1 {
+						if inventory[i] != -1 {
 
 						
-							var spr = object_get_sprite(inventory_items_arr[i,1]);
+							var spr = inventory[i].sprite;
 						
 							var stretch_to = 48;
 							var spr_w = sprite_get_width(spr);
@@ -114,10 +114,10 @@ if global.show_book == true {
 						draw_sprite(sprItembox, i, book_itembox_x + book_page_width, book_itembox_y[i - fit_one_page]);
 						
 						//Draw the items in the boxes
-						if inventory_items_arr[i,0] != -1 {
+						if inventory[i] != -1 {
 
 						
-							var spr = object_get_sprite(inventory_items_arr[i,1]);
+							var spr = inventory[i].sprite;
 						
 							var stretch_to = 48;
 							var spr_w = sprite_get_width(spr);
